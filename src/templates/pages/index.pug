@@ -2,13 +2,12 @@ extends ../template
 
 block varibles
     -var title="Welcome Page"
-
 block content
     section(class="welcome section")
         div(class="welcome__inner")
             div(class="welcome__container")
                 header(class="welcome__header")
-                    a(class="welcome__header-link autorization-btn" href="#") Авторизация
+                    a(class="welcome__header-link authorization-btn" href="#") Авторизация
                 div(class="welcome__box")
                     div(class="welcome__box-inner")
                         div(class="welcome__content")
@@ -18,13 +17,15 @@ block content
                                 h1(class="welcome__content-header") Омельченко Степан
                                 p(class="welcome__content-subscribe") Личный сайт веб разработчика
                             div(class="welcome__content-socials socials")
-                                ul(class="socials__list")
-                                    li(class="socials__item")
-                                        a(class="social__link" href="#") VK
-                                    li(class="socials__item")
-                                        a(class="social__link" href="#") GIT
-                                    li(class="socials__item")
-                                        a(class="social__link" href="#") IN
+                                include ../common/socials.pug
+                        nav(class="welcome-navigation")
+                            ul(class="welcome-navigation__list")
+                                li(class="welcome-navigation__item")
+                                    a(class="welcome-navigation__link" href="works.html") Мои работы
+                                li(class="welcome-navigation__item")
+                                    a(class="welcome-navigation__link" href="about.html") Обо мне
+                                li(class="welcome-navigation__item")
+                                    a(class="welcome-navigation__link" href="blog.html") Блог
                 footer(class="welcome__footer")
                     p(class="welcome__footer-signature") © Омельченко Степан | создано с любовью в LoftSchool | 2016
                     
