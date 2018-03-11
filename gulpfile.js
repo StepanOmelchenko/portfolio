@@ -92,6 +92,22 @@ function scripts() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function watch() {
+    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.templates.src, templates);
+    gulp.watch(paths.images.src, images);
+    gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.fonts.src, fonts);
+}
+
+function server() {
+    browserSync.init({
+        server: paths.root,
+        open: false
+    });
+    browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
+}
+
 exports.scss = styles;
 exports.pug = templates;
 exports.img = images;
@@ -101,5 +117,6 @@ exports.scripts = scripts;
 
 gulp.task('default', gulp.series(
     clear,
-    gulp.parallel(styles, templates, images, fonts, scripts)
+    gulp.parallel(styles, templates, images, fonts, scripts),
+    gulp.parallel(watch, server)
 ));
