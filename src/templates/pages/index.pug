@@ -11,11 +11,8 @@ block content
                 div(class="welcome__box")
                     div(class="welcome__box-inner")
                         div(class="welcome__content")
-                            div(class="welcome__content-info")
-                                div(class="welcome__content-wrapper")
-                                    img(class="welcome__content-img" src="img/content/foto.jpg" alt="Omelchenko Stepan, web developer" hidden)
-                                h1(class="welcome__content-header") Омельченко Степан
-                                p(class="welcome__content-subscribe") Личный сайт веб разработчика
+                            div(class="welcome__info")
+                                include ../common/info.pug
                             div(class="welcome__content-socials socials")
                                 include ../common/socials.pug
                         nav(class="welcome-navigation")

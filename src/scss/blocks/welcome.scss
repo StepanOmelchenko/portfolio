@@ -16,8 +16,8 @@
     }
     
     &__container{
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 95%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,31 +47,7 @@
     }
     
     &__content{
-        padding: 30px 0;
-        text-align: center;
-        
-        &-wrapper{
-            display: inline-block;
-            width: 141px;
-            height: 141px;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            background-image: url("../img/content/foto.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        &-header{
-            font-family: 'robotomedium', Arial, Helvetica, sans-serif;
-            font-size: 28px;
-            margin-bottom: 9px;
-        }
-
-        &-subscribe{
-            margin-bottom: 35px;
-            opacity: .6;
-        }
-    
+        padding-top: 40px;
     }
     
 }

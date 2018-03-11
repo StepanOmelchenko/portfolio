@@ -1,0 +1,41 @@
+.section-top{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bg/section-top.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    &__inner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url("../img/png/portfolio-header.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__header{
+        width: 100%;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__socials{
+        margin-left: 30px;
+    }
+
+    &__menu{
+        margin-right: 30px;
+    }
+
+    &__container{
+
+    }
+
+}

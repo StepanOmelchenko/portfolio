@@ -1,0 +1,26 @@
+.info{
+    text-align: center;
+    
+    &__wrapper{
+        display: inline-block;
+        width: 141px;
+        height: 141px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        background-image: url("../img/content/foto.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    &__header{
+        font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 9px;
+    }
+    
+    &__subscribe{
+        margin-bottom: 35px;
+        opacity: .6;
+    }
+}

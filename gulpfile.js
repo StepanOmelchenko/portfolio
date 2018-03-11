@@ -118,5 +118,5 @@ exports.scripts = scripts;
 gulp.task('default', gulp.series(
     clear,
     gulp.parallel(styles, templates, images, fonts, scripts),
-    gulp.parallel(watch, server)
+    /* gulp.parallel(watch, server) */
 ));
