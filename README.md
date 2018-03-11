@@ -1,8 +1,8 @@
-made by Stepan Omelchenko
+Stepan Omelchenko
 portfolio website
 
 to install:
 
-clone this repo
-npm i
-gulp
+1. clone this repo
+2. npm i
+3. gulp
