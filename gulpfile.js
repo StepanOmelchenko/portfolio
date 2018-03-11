@@ -5,6 +5,9 @@ const rename = require('gulp-rename');
 const pug = require('gulp-pug');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
+const gulpWebpack = require('gulp-webpack');
+const webpack = require('webpack');
+const browserSync = require('browser-sync').create();
 
 const paths = {
     root: './build',
@@ -22,6 +25,10 @@ const paths = {
     fonts: {
         src: './src/fonts/**/*.*',
         dest: './build/fonts'
+    },
+    scripts: {
+        src: './src/lib/**/*.js',
+        dest: './build/lib'
     }
 };
 
@@ -60,13 +67,39 @@ function fonts() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
+function scripts() {
+    return gulp.src(paths.scripts.src)
+        .pipe(gulpWebpack({
+            output: {
+                filename: 'bundle.js'
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.js$/,
+                        exclude: /node_modules/,
+                        loader: 'babel-loader',
+                        query: {
+                            'presets': [
+                                'env'
+                            ]
+                        }
+                    }
+                ]
+            },
+            mode: 'development'
+        }, webpack))
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
 exports.scss = styles;
 exports.pug = templates;
 exports.img = images;
 exports.delRoot = clear;
-exports.fonts = fonts;
+exports.fonts = fonts
+exports.scripts = scripts;
 
 gulp.task('default', gulp.series(
     clear,
-    gulp.parallel(styles, templates, images, fonts)
+    gulp.parallel(styles, templates, images, fonts, scripts)
 ));
