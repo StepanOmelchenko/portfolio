@@ -1,8 +1,8 @@
 .authorization-btn{
     width: 200px;
     height: 50px;
-    border: 1px groove #fff;
-    border-radius: 45%;
+    border: 1px groove $white;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,50 +10,38 @@
     transition: background-color .2s;
 
     &:hover{
-        background-color: #4e8839;
+        background-color: $btnsHover;
     }
 
 }
 
-/* .hamburger{
+.hamburger{
     width: 40px;
     height: 35px;
 
     &__link{
         width: 100%;
         height: 100%;
-        position: relative;
     }
 
     &__pipe{
         width: 100%;
-        height: 15%;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #fff;
+        height: 5px;
+        position: relative;
+        background-color: $white;
         border-radius: 5px;
 
-        &:before{
+        &:before,
+        &:after{
+            @extend .hamburger__pipe;
             content: "";
             display: block;
-            width: 100%;
-            height: 15%;
             position: absolute;
-            bottom: 0;
-            background-color: #fff;
-            border-radius: 5px;
+            top: 300%;
         }
 
         &:after{
-            content: "";
-            display: block;
-            width: 100%;
-            height: 15%;
-            position: absolute;
-            top: 0;
-            background-color: #fff;
-            border-radius: 5px;
+            top: 600%;
         }
     }
-} */
+}

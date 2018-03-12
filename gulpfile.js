@@ -12,9 +12,11 @@ const browserSync = require('browser-sync').create();
 const paths = {
     root: './build',
     templates: {
+        src: './src/templates/**/*.pug',
         pages: './src/templates/pages/*.pug'
     },
     styles: {
+        src: './src/scss/**/*.scss',
         main: './src/scss/main.scss',
         dest: './build/css'
     },
@@ -118,5 +120,5 @@ exports.scripts = scripts;
 gulp.task('default', gulp.series(
     clear,
     gulp.parallel(styles, templates, images, fonts, scripts),
-    /* gulp.parallel(watch, server) */
+    gulp.parallel(watch/* , server */)
 ));
