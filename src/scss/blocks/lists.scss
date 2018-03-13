@@ -1,22 +1,31 @@
 .socials{
-    
+    margin-bottom: 40px;
+
     &__list{
         display: flex;
+        align-items: center;
         justify-content: center;
+    }
+    
+    &__item{
+        display: inline-block;
+        margin: 0 25px;
     }
     
     &__link{
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+    }
     
+    &__svg{
+        height: 24px;
+        fill: $white;
+        opacity: .5;
+      
         &:hover{
-            background-color: #4e8839;
+            fill: #4e8839;
         }
-    
-    } 
-}
+    }
+  }

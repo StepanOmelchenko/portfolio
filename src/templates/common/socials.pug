@@ -1,7 +1,14 @@
-ul(class="socials__list")
-    li(class="socials__item")
-        a(class="socials__link" href="#") VK
-    li(class="socials__item")
-        a(class="socials__link" href="#") GIT
-    li(class="socials__item")
-        a(class="socials__link" href="#") IN
+div.socials
+    ul.socials__list
+        li.socials__item
+            a.socials__link(href="#")
+                svg.socials__svg(fill="none")
+                    use(xlink:href="#vk")
+        li.socials__item
+            a.socials__link(href="#")
+                svg.socials__svg(fill="none")
+                    use(xlink:href="#git")
+        li.socials__item
+            a.socials__link(href="#")
+                svg.socials__svg(fill="none")
+                    use(xlink:href="#in")
