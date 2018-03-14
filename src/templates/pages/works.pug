@@ -3,5 +3,11 @@ extends ../template
 block varibles
     -var title="My works"
 block content
-    include ../common/section-top
-    include ../common/socials-pantry.pug
+    div.wrapper
+        section(class="section works-section")
+            include ../common/section-top
+            svg.works-traingle
+                use(xlink:href="#works__traingle")
+        section(class="section works-section")
+        include ../common/pantry-socials.pug
+        include ../common/pantry-traingles.pug
