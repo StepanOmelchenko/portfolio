@@ -4,10 +4,16 @@ block varibles
     -var title="My works"
 block content
     div.wrapper
-        section(class="section works-section")
-            include ../common/section-top
-            svg.works-traingle
-                use(xlink:href="#works__traingle")
-        section(class="section works-section")
+        section(class="section works-first")
+            include ../common/section-top    
+        section(class="section works-second")
+            .works-second__traingle
+                svg.works-second__svg
+                    use(xlink:href="#works__traingle")
+            .works-second__top
+                h1.works-second__main-header Мои работы
+            .works-second__slider.slider
+                .slider__left
+                .slider__right
         include ../common/pantry-socials.pug
         include ../common/pantry-traingles.pug

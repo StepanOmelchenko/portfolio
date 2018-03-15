@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="section works-section">
+      <section class="section works-first">
         <section class="section-top">
           <div class="section-top__inner">
             <header class="section-top__header">
@@ -44,17 +44,27 @@
                 <p class="info__subscribe">Личный сайт веб разработчика</p>
               </div>
             </div>
-            <div class="section-top__btn"><a class="section-top__next-link" href="#">
-                <svg class="section-top__next-svg">
-                  <use xlink:href="./img/svg/arrow-down.svg"></use>
+            <div class="section-top__next"><a class="section-top__next-link" href="#">
+                <svg class="section-top__next-svg" width="26" height="16">
+                  <use xlink:href="#arrow-down"></use>
                 </svg></a></div>
           </div>
         </section>
-        <svg class="works-traingle">
-          <use xlink:href="#works__traingle"></use>
-        </svg>
       </section>
-      <section class="section works-section"></section>
+      <section class="section works-second">
+        <div class="works-second__traingle">
+          <svg class="works-second__svg">
+            <use xlink:href="#works__traingle"></use>
+          </svg>
+        </div>
+        <div class="works-second__top">
+          <h1 class="works-second__main-header">Мои работы</h1>
+        </div>
+        <div class="works-second__slider slider">
+          <div class="slider__left"></div>
+          <div class="slider__right"></div>
+        </div>
+      </section>
       <div class="pantry-socials" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <symbol class="svg-social__sprite">
@@ -72,8 +82,11 @@
       </div>
       <div class="pantry-triangles" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="works__traingle" preserveaspectratio="none" viewbox="0 0 1000 85">
-          <polygon points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
-          <polygon points="1000,0 1000,86 500,86 500,75.5"></polygon>
+          <polygon points="0,0 0,86 501,86 501,76"></polygon>
+          <polygon points="1000,0 1000,86 500,86 500,76"></polygon>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="arrow-down" viewBox="0 0 26 16">
+          <path d="M13.293 15.871a.99.99 0 0 1-1.406 0L.293 4.293a1.009 1.009 0 0 1 0-1.422L2.887.293a.99.99 0 0 1 1.406 0L12.59 8.59 20.887.293a.99.99 0 0 1 1.406 0l2.594 2.578a1.009 1.009 0 0 1 0 1.422L13.293 15.871z"></path>
         </svg>
       </div>
     </div>
