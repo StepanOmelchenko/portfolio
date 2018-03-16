@@ -58,11 +58,24 @@
           </svg>
         </div>
         <div class="works-second__top">
+          <!--svg.works-second__top-svg(width="100%")//use(xlink:href="img/svg/works_header.svg")
+          -->
           <h1 class="works-second__main-header">Мои работы</h1>
         </div>
-        <div class="works-second__slider slider">
-          <div class="slider__left"></div>
-          <div class="slider__right"></div>
+        <div class="works-slider">
+          <div class="slider">
+            <div class="slider__left"></div>
+            <div class="slider__right">
+              <div class="slider__curent"><img class="slider__img"></div>
+              <div class="slider__controls"><a class="slider__down" href="#">
+                  <svg class="slider__down-svg" width="43" height="27">
+                    <use xlink:href="#arrow-down"></use>
+                  </svg></a><a class="slider__up" href="#">
+                  <svg class="slider__up-svg" width="43" height="27">
+                    <use xlink:href="#arrow-down"></use>
+                  </svg></a></div>
+            </div>
+          </div>
         </div>
       </section>
       <div class="pantry-socials" hidden>
@@ -89,6 +102,7 @@
           <path d="M13.293 15.871a.99.99 0 0 1-1.406 0L.293 4.293a1.009 1.009 0 0 1 0-1.422L2.887.293a.99.99 0 0 1 1.406 0L12.59 8.59 20.887.293a.99.99 0 0 1 1.406 0l2.594 2.578a1.009 1.009 0 0 1 0 1.422L13.293 15.871z"></path>
         </svg>
       </div>
+      <!--include ../common/svg-sprite-works.pug-->
     </div>
     <script src="./lib/bundle.js"></script>
   </body>

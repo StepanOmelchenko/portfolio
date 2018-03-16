@@ -11,9 +11,22 @@ block content
                 svg.works-second__svg
                     use(xlink:href="#works__traingle")
             .works-second__top
+                //svg.works-second__top-svg(width="100%")
+                    //use(xlink:href="img/svg/works_header.svg")
                 h1.works-second__main-header Мои работы
-            .works-second__slider.slider
-                .slider__left
-                .slider__right
+            .works-slider
+                .slider
+                    .slider__left
+                    .slider__right
+                        .slider__curent
+                            img.slider__img
+                        .slider__controls
+                            a.slider__down(href="#")
+                                svg.slider__down-svg(width="43" height="27")
+                                    use(xlink:href="#arrow-down")
+                            a.slider__up(href="#")
+                                svg.slider__up-svg(width="43" height="27")
+                                    use(xlink:href="#arrow-down")
         include ../common/pantry-socials.pug
         include ../common/pantry-traingles.pug
+        //include ../common/svg-sprite-works.pug
