@@ -51,30 +51,47 @@
           </div>
         </section>
       </section>
-      <section class="section works-second">
+      <div class="works-second">
         <div class="works-second__traingle">
           <svg class="works-second__svg">
             <use xlink:href="#works__traingle"></use>
           </svg>
         </div>
         <div class="works-second__top">
-          <!--svg.works-second__top-svg(width="100%")//use(xlink:href="img/svg/works_header.svg")
-          -->
+          <svg class="works-second__top-svg" width="100%">
+            <use xlink:href="img/sprites/sprite.svg#works_header"></use>
+          </svg>
           <h1 class="works-second__main-header">Мои работы</h1>
         </div>
-        <div class="works-slider">
-          <div class="slider">
-            <div class="slider__left"></div>
-            <div class="slider__right">
-              <div class="slider__curent"><img class="slider__img"></div>
-              <div class="slider__controls"><a class="slider__down" href="#">
+      </div>
+      <section class="works-slider section">
+        <div class="slider">
+          <div class="slider__left">
+            <div class="slider__left-box">
+              <div class="slider__left-info">
+                <h2 class="slider__left-header">Сайт школы онлайн Образования</h2>
+                <p class="slider__left-text">HTML, CSS, JAVASCRIPT</p>
+              </div><a class="slider__left-btn" href="#">
+                <svg class="slider__left-svg" width="20" height="20">
+                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                </svg><span class="slider__left-span">Посмотреть сайт</span></a>
+            </div>
+          </div>
+          <div class="slider__right">
+            <div class="slider__current">
+              <div class="slider__current-box" style="background-image: url('img/slider/3.png')"><img class="slider__img" src="img/slider/3.png" alt="my project" hidden></div>
+            </div>
+            <div class="slider__controls"><a class="slider__down" href="#" style="background-image: url('img/slider/1.png')">
+                <div class="slider__down-btn">
                   <svg class="slider__down-svg" width="43" height="27">
                     <use xlink:href="#arrow-down"></use>
-                  </svg></a><a class="slider__up" href="#">
+                  </svg>
+                </div></a><a class="slider__up" href="#" style="background-image: url('img/slider/2.png')">
+                <div class="slider__up-btn">
                   <svg class="slider__up-svg" width="43" height="27">
                     <use xlink:href="#arrow-down"></use>
-                  </svg></a></div>
-            </div>
+                  </svg>
+                </div></a></div>
           </div>
         </div>
       </section>

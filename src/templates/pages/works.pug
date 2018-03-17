@@ -6,25 +6,36 @@ block content
     div.wrapper
         section(class="section works-first")
             include ../common/section-top    
-        section(class="section works-second")
+        .works-second
             .works-second__traingle
                 svg.works-second__svg
                     use(xlink:href="#works__traingle")
             .works-second__top
-                //svg.works-second__top-svg(width="100%")
-                    //use(xlink:href="img/svg/works_header.svg")
+                svg.works-second__top-svg(width="100%")
+                    use(xlink:href="img/sprites/sprite.svg#works_header")
                 h1.works-second__main-header Мои работы
-            .works-slider
-                .slider
-                    .slider__left
-                    .slider__right
-                        .slider__curent
-                            img.slider__img
-                        .slider__controls
-                            a.slider__down(href="#")
+        section.works-slider.section
+            .slider
+                .slider__left
+                    .slider__left-box
+                        .slider__left-info
+                            h2.slider__left-header Сайт школы онлайн Образования
+                            p.slider__left-text HTML, CSS, JAVASCRIPT
+                        a.slider__left-btn(href="#")
+                            svg.slider__left-svg(width="20" height="20")
+                                use(xlink:href="img/sprites/sprite.svg#link")
+                            span.slider__left-span Посмотреть сайт
+                .slider__right
+                    .slider__current
+                        .slider__current-box(style="background-image: url('img/slider/3.png')")
+                            img.slider__img(src="img/slider/3.png" alt="my project" hidden)
+                    .slider__controls
+                        a.slider__down(href="#" style="background-image: url('img/slider/1.png')")
+                            .slider__down-btn
                                 svg.slider__down-svg(width="43" height="27")
                                     use(xlink:href="#arrow-down")
-                            a.slider__up(href="#")
+                        a.slider__up(href="#" style="background-image: url('img/slider/2.png')")
+                            .slider__up-btn
                                 svg.slider__up-svg(width="43" height="27")
                                     use(xlink:href="#arrow-down")
         include ../common/pantry-socials.pug

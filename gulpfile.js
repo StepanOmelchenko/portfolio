@@ -158,6 +158,7 @@ exports.delRoot = clear;
 exports.fonts = fonts
 exports.scripts = scripts;
 exports.spriteSvg = spriteSvg;
+exports.watch = watch;
 
 gulp.task('default', gulp.series(
     clear,

@@ -1,6 +1,7 @@
 .slider{
     display: flex;
     width: 100%;
+    height: 100%;
 
     &__left,
     &__right{
@@ -9,27 +10,146 @@
     }
 
     &__left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #ebefe2;
+
+        &-box{
+            width: 320px;
+            text-align: center;
+        }
+
+        &-info{
+            margin-bottom: 60px;
+        }
+
+        &-header{
+            font-family: "sansus_webissimoregular", Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            font-weight: 400;
+            text-align: center;
+            position: relative;
+            margin-bottom: 60px;
+
+            &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 30%;
+                height: 3px;
+                background-color: #566358;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &-text{
+            text-transform: uppercase;
+            color: #4e8839;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        &-btn{
+            width: 200px;
+            height: 45px;
+            background-color: #6c9c5a;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        &-svg{
+            fill: $white;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        &-span{
+            color: $white;
+            line-height: 45px;            
+            vertical-align: middle;
+        }
+
     }
+
+    
 
     &__right{
         background-color: #e1e4d7;
     }
 
-    &__curent{
+    &__current{
+        width: 100%;
+        height: 70%;
         min-height: 525px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-box{
+            width: 90%;
+            height: 90%;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__controls{
+        width: 100%;
+        height: 30%;
+        display: flex;
     }
 
     &__down,
     &__up{
+        position: relative;
         width: 50%;
         min-height: 225px;
         background-color: #e3ded0;
-
+        background-size: contain;
+        background-repeat: no-repeat;
         
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(176, 183, 170, 0.7);
+        }
+
+        &-btn{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);           
+            transition: scale .2s;
+        }
 
         &-svg{
-            fill: $white;
+            fill: $white; 
+        }
+
+        &:hover &-svg{
+            transform: scale(1.2);
+        }
+
+    }
+
+    &__up{
+
+        &-btn{
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        &:before{
+            background-color: rgba(147, 153, 141, 0.7);
         }
     }
 }
