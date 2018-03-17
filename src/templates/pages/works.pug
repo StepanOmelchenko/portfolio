@@ -38,5 +38,47 @@ block content
                             .slider__up-btn
                                 svg.slider__up-svg(width="43" height="27")
                                     use(xlink:href="#arrow-down")
+        section.works-about
+            .works-about__rumors
+                .works-about__top
+                    svg.works-about__top-svg(width="500" height="175")
+                        use(xlink:href="img/sprites/sprite.svg#about_header")
+                    h2.works-about__header Что обо мне говорят
+                .works-about__reviews
+                    ul.works-about__reviews-list
+                        li.works-about__reviews-item
+                            .works-about__reviews-picture(style="background-image: url('img/content/review1.jpg')")
+                                img.works-about__reviews-img(hidden src="img/content/review1.jpg", alt="Ковальчук Дмитрий основатель Loftschool")
+                            .works-about__reviews-info
+                                p.works-about__reviews-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                                .works-about__reviews-signature 
+                                    .works-about__reviews-name Ковальчук Дмитрий
+                                    .works-about__reviews-position — основатель Loftschool
+                        li.works-about__reviews-item
+                            .works-about__reviews-picture(style="background-image: url('img/content/review2.jpg')")
+                                img.works-about__reviews-img(hidden src="img/content/review2.jpg", alt="Ковальчук Дмитрий основатель Loftschool")
+                            .works-about__reviews-info
+                                p.works-about__reviews-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                                .works-about__reviews-signature
+                                    .works-about__reviews-name Сабанцев Владимир
+                                    .works-about__reviews-position  — преподаватель
+            .works-about__form
+                form.form(id="form" method="POST" action="mail.php")
+                    h2.form__header Связаться со мной
+                    label.form__label(for="name")
+                        input.form__input(type="text" name="name" placeholder="Имя")
+                    label.form__label(for="email")
+                        input.form__input(type="text" name="email" placeholder="Email")
+                    textarea.form__textarea(name="text", cols="30", rows="10" placeholder="Ваше сообщение")
+                    .form__controls
+                        label.form__submit-label
+                            span.form__submit-span Отправить
+                            input.form__submit(type="submit")
+                        label.form__reset-label 
+                            span.form__reset-span Очистить
+                            input.form__reset(type="reset")
+            a.works-about__btn(href="#")
+                svg.works-about__btn-svg(width="43" height="27")
+                    use(xlink:href="#arrow-down")
         include ../common/pantry-socials.pug
         include ../common/pantry-traingles.pug
