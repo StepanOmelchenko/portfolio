@@ -1,0 +1,16 @@
+.authorization-btn{
+    width: 200px;
+    height: 50px;
+    border: 1px groove $white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+    transition: background-color .2s;
+
+    &:hover{
+        background-color: $btnsHover;
+    }
+
+}

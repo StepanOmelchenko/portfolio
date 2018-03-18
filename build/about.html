@@ -9,59 +9,255 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <section class="section-top">
-      <div class="section-top__inner">
-        <header class="section-top__header">
-          <div class="section-top__socials">
-            <div class="socials">
-              <ul class="socials__list">
-                <li class="socials__item"><a class="socials__link" href="#">
-                    <svg class="socials__svg" fill="none">
-                      <use xlink:href="#vk"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link" href="#">
-                    <svg class="socials__svg" fill="none">
-                      <use xlink:href="#git"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link" href="#">
-                    <svg class="socials__svg" fill="none">
-                      <use xlink:href="#in"></use>
-                    </svg></a></li>
+    <div class="wrapper">
+      <section class="section about__hero">
+        <section class="section-top">
+          <div class="section-top__inner">
+            <header class="section-top__header">
+              <div class="section-top__socials">
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__svg" fill="none">
+                          <use xlink:href="#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__svg" fill="none">
+                          <use xlink:href="#git"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__svg" fill="none">
+                          <use xlink:href="#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="section-top__menu">
+                <div class="hamburger"><a class="hamburger__link" href="#" id="hamburger">
+                    <div class="hamburger__pipe"></div></a></div>
+              </div>
+            </header>
+            <div class="section-top__container">
+              <div class="info">
+                <div class="info__wrapper"><img class="info__img" src="img/content/foto.jpg" alt="Omelchenko Stepan, web developer" hidden></div>
+                <h1 class="info__header">Омельченко Степан</h1>
+                <p class="info__subscribe">Личный сайт веб разработчика</p>
+              </div>
+            </div>
+            <div class="section-top__next"><a class="section-top__next-link" href="#">
+                <svg class="section-top__next-svg" width="26" height="16">
+                  <use xlink:href="img/sprites/sprite.svg#arrow_down"></use>
+                </svg></a></div>
+          </div>
+        </section>
+      </section>
+      <section class="section about__main">
+        <div class="about__traingles">
+          <svg class="about__traingles-left" width="100" height="100">
+            <use xlink:href="img/sprites/sprite.svg#about_bg_left"></use>
+          </svg>
+          <svg class="about__traingles-right" width="100" height="100">
+            <use xlink:href="img/sprites/sprite.svg#about_bg_right"></use>
+          </svg>
+        </div>
+        <div class="about__content">
+          <div class="about__content-left">
+            <div class="about__header">
+              <svg class="about__header-svg">
+                <use xlink:href="img/sprites/sprite.svg#about_header"></use>
+              </svg>
+              <h2 class="about__header-h2">Обо&nbsp;мне</h2>
+            </div>
+            <div class="about__information">
+              <div class="about__information-picture" style="background-image: url('img/content/dude.jpg')"><img class="about__information-img" src="img/content/dude.jpg" alt="web developer" hidden></div>
+              <div class="about__information-content">
+                <h3 class="about__information-header">Кто я</h3>
+                <article class="about__information-text">
+                  <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+                  <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="about__content-right">
+            <div class="about__profit">
+              <h3 class="about__profit-header">Чем я могу быть вам полезен</h3>
+              <p class="about__profit-text">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+            </div>
+            <div class="about__diagrams">
+              <ul class="about__diagrams-content">
+                <li class="about__diagrams-row">
+                  <h3 class="about__diagrams-header">Frontend</h3>
+                  <ul class="about__diagrams-list">
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">HTML5</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">CSS3</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">JavaScript</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="about__diagrams-row">
+                  <h3 class="about__diagrams-header">Backend</h3>
+                  <ul class="about__diagrams-list">
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">PHP</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">mySQL</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">Node.js & npm</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">Mongo.db</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="about__diagrams-row">
+                  <h3 class="about__diagrams-header">WorkFlow</h3>
+                  <ul class="about__diagrams-list">
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">Git</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">Gulp</span>
+                    </li>
+                    <li class="about__diagrams-item">
+                      <svg class="about__diagrams-svg" width="100" height="100">
+                        <use xlink:href="#diagram-circle"></use>
+                      </svg><span class="about__diagrams-title">Bower</span>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
-          <div class="section-top__menu">
-            <div class="hamburger"><a class="hamburger__link" href="#" id="hamburger">
-                <div class="hamburger__pipe"></div></a></div>
-          </div>
-        </header>
-        <div class="section-top__container">
-          <div class="info">
-            <div class="info__wrapper"><img class="info__img" src="img/content/foto.jpg" alt="Omelchenko Stepan, web developer" hidden></div>
-            <h1 class="info__header">Омельченко Степан</h1>
-            <p class="info__subscribe">Личный сайт веб разработчика</p>
-          </div>
         </div>
-        <div class="section-top__next"><a class="section-top__next-link" href="#">
-            <svg class="section-top__next-svg" width="26" height="16">
-              <use xlink:href="#arrow-down"></use>
-            </svg></a></div>
+      </section>
+      <section class="section about__map">
+        <div class="about__map-box">
+          <h2 class="about__map-header">Контакты</h2>
+          <ul class="about__map-list">
+            <li class="about__map-item">
+              <svg class="about__map-svg" width="24" height="24">
+                <use xlink:href="img/sprites/sprite.svg#skype"></use>
+              </svg><a class="about__map-link" href="">skype_kdn</a>
+            </li>
+            <li class="about__map-item">
+              <svg class="about__map-svg" width="23" height="16">
+                <use xlink:href="img/sprites/sprite.svg#envelope2"></use>
+              </svg><a class="about__map-link" href="">astahov@gmail.com</a>
+            </li>
+            <li class="about__map-item">
+              <svg class="about__map-svg" width="17" height="20">
+                <use xlink:href="img/sprites/sprite.svg#phone2"></use>
+              </svg><a class="about__map-link" href="">+7 931 200 93 24</a>
+            </li>
+            <li class="about__map-item">
+              <svg class="about__map-svg" width="16" height="21">
+                <use xlink:href="img/sprites/sprite.svg#map_marker"></use>
+              </svg><a class="about__map-link" href="">Новосибирск, ул. Инская, д.14</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer class="about__footer">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__top-section footer__left">
+              <p class="footer__left-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+            </div>
+            <div class="footer__top-section footer__center">
+              <nav class="footer__navigation">
+                <div class="navigation">
+                  <ul class="navigation__list">
+                    <li class="navigation__item"><a class="navigation__link" href="works.html">Мои работы</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="index.html">Авторизация</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="footer__socials">
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__svg" fill="none">
+                          <use xlink:href="#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__svg" fill="none">
+                          <use xlink:href="#git"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__svg" fill="none">
+                          <use xlink:href="#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer__top-section footer__right">
+              <div class="footer__right-content">
+                <p class="footer__right-text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p><span class="footer__right-signatere">— Martin Golding</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom"><span class="footer__bottom-signature">© Омельченко Степан | Создано с любовью в LoftSchool | 2018</span></div>
+        </div>
+      </footer>
+      <div class="pantry-socials" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <symbol class="svg-social__sprite">
+            <svg id="git" viewBox="0 0 26 22">
+              <path d="M25.047 17.422C22.984 21.594 17.313 22 13.25 22 9.125 22 3.109 21.641.969 17.422.172 15.844 0 13.984 0 12.25c0-2.281.625-4.438 2.125-6.188a8.585 8.585 0 0 1-.422-2.656c0-1.172.266-2.343.797-3.406 2.469 0 4.047 1.078 5.922 2.547A20.895 20.895 0 0 1 13.25 2c1.469 0 2.953.156 4.375.5C19.484 1.047 21.063 0 23.5 0a7.629 7.629 0 0 1 .797 3.406c0 .891-.141 1.781-.422 2.625C25.375 7.797 26 9.969 26 12.25c0 1.734-.172 3.578-.953 5.172zM18.5 10.5c-1.031 0-2.016.188-3.047.328-.812.125-1.625.172-2.453.172s-1.641-.047-2.453-.172c-1.016-.14-2.016-.328-3.047-.328-2.547 0-4 2.109-4 4.5 0 4.781 4.375 5.516 8.188 5.516h2.625c3.813 0 8.188-.734 8.188-5.516-.001-2.391-1.454-4.5-4.001-4.5zM8 18c-1.406 0-2-1.859-2-3s.594-3 2-3 2 1.859 2 3-.594 3-2 3zm10 0c-1.406 0-2-1.859-2-3s.594-3 2-3 2 1.859 2 3-.594 3-2 3z"></path>
+            </svg>
+            <svg id="in" viewBox="0 0 24 22">
+              <path d="M2.875 5.344h-.031C1.109 5.344 0 4.156 0 2.672 0 1.156 1.156 0 2.906 0c1.766 0 2.859 1.156 2.875 2.672.016 1.484-1.109 2.672-2.906 2.672zm2.578 17.594H.297V7.453h5.156v15.485zm18.547 0h-5.141v-8.281c0-2.078-.75-3.5-2.609-3.5-1.422 0-2.266.953-2.641 1.875-.125.344-.172.797-.172 1.266v8.641h-5.14c.063-14.031 0-15.484 0-15.484h5.141v2.25h-.031c.672-1.063 1.891-2.609 4.672-2.609 3.391 0 5.922 2.219 5.922 6.969v8.873z"></path>
+            </svg>
+            <svg id="vk" viewBox="0 0 31 17">
+              <path d="M27.625 5.832c-3.031 4.031-3.359 3.656-.859 5.984 2.406 2.234 2.906 3.313 2.984 3.453 0 0 1 1.75-1.109 1.766l-4 .063c-.859.172-2-.609-2-.609-1.5-1.031-2.906-3.703-4-3.359 0 0-1.125.359-1.094 2.766.016.516-.234.797-.234.797s-.281.297-.828.344h-1.797c-3.953.25-7.438-3.391-7.438-3.391S3.437 9.707.093 1.848c-.219-.516.016-.766.016-.766S.343.785 1 .785L5.281.754c.406.063.688.281.688.281s.25.172.375.5c.703 1.75 1.609 3.344 1.609 3.344 1.563 3.219 2.625 3.766 3.234 3.438 0 0 .797-.484.625-4.375-.063-1.406-.453-2.047-.453-2.047-.359-.485-1.031-.625-1.328-.672-.234-.031.156-.594.672-.844.766-.375 2.125-.391 3.734-.375 1.266.016 1.625.094 2.109.203 1.484.359.984 1.734.984 5.047 0 1.063-.203 2.547.563 3.031.328.219 1.141.031 3.141-3.375 0 0 .938-1.625 1.672-3.516.125-.344.391-.484.391-.484s.25-.141.594-.094l4.5-.031c1.359-.172 1.578.453 1.578.453.234.641-.501 2.141-2.344 4.594z"></path>
+            </svg>
+          </symbol>
+        </svg>
       </div>
-    </section>
-    <div class="pantry-socials" hidden>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <symbol class="svg-social__sprite">
-          <svg id="git" viewBox="0 0 26 22">
-            <path d="M25.047 17.422C22.984 21.594 17.313 22 13.25 22 9.125 22 3.109 21.641.969 17.422.172 15.844 0 13.984 0 12.25c0-2.281.625-4.438 2.125-6.188a8.585 8.585 0 0 1-.422-2.656c0-1.172.266-2.343.797-3.406 2.469 0 4.047 1.078 5.922 2.547A20.895 20.895 0 0 1 13.25 2c1.469 0 2.953.156 4.375.5C19.484 1.047 21.063 0 23.5 0a7.629 7.629 0 0 1 .797 3.406c0 .891-.141 1.781-.422 2.625C25.375 7.797 26 9.969 26 12.25c0 1.734-.172 3.578-.953 5.172zM18.5 10.5c-1.031 0-2.016.188-3.047.328-.812.125-1.625.172-2.453.172s-1.641-.047-2.453-.172c-1.016-.14-2.016-.328-3.047-.328-2.547 0-4 2.109-4 4.5 0 4.781 4.375 5.516 8.188 5.516h2.625c3.813 0 8.188-.734 8.188-5.516-.001-2.391-1.454-4.5-4.001-4.5zM8 18c-1.406 0-2-1.859-2-3s.594-3 2-3 2 1.859 2 3-.594 3-2 3zm10 0c-1.406 0-2-1.859-2-3s.594-3 2-3 2 1.859 2 3-.594 3-2 3z"></path>
-          </svg>
-          <svg id="in" viewBox="0 0 24 22">
-            <path d="M2.875 5.344h-.031C1.109 5.344 0 4.156 0 2.672 0 1.156 1.156 0 2.906 0c1.766 0 2.859 1.156 2.875 2.672.016 1.484-1.109 2.672-2.906 2.672zm2.578 17.594H.297V7.453h5.156v15.485zm18.547 0h-5.141v-8.281c0-2.078-.75-3.5-2.609-3.5-1.422 0-2.266.953-2.641 1.875-.125.344-.172.797-.172 1.266v8.641h-5.14c.063-14.031 0-15.484 0-15.484h5.141v2.25h-.031c.672-1.063 1.891-2.609 4.672-2.609 3.391 0 5.922 2.219 5.922 6.969v8.873z"></path>
-          </svg>
-          <svg id="vk" viewBox="0 0 31 17">
-            <path d="M27.625 5.832c-3.031 4.031-3.359 3.656-.859 5.984 2.406 2.234 2.906 3.313 2.984 3.453 0 0 1 1.75-1.109 1.766l-4 .063c-.859.172-2-.609-2-.609-1.5-1.031-2.906-3.703-4-3.359 0 0-1.125.359-1.094 2.766.016.516-.234.797-.234.797s-.281.297-.828.344h-1.797c-3.953.25-7.438-3.391-7.438-3.391S3.437 9.707.093 1.848c-.219-.516.016-.766.016-.766S.343.785 1 .785L5.281.754c.406.063.688.281.688.281s.25.172.375.5c.703 1.75 1.609 3.344 1.609 3.344 1.563 3.219 2.625 3.766 3.234 3.438 0 0 .797-.484.625-4.375-.063-1.406-.453-2.047-.453-2.047-.359-.485-1.031-.625-1.328-.672-.234-.031.156-.594.672-.844.766-.375 2.125-.391 3.734-.375 1.266.016 1.625.094 2.109.203 1.484.359.984 1.734.984 5.047 0 1.063-.203 2.547.563 3.031.328.219 1.141.031 3.141-3.375 0 0 .938-1.625 1.672-3.516.125-.344.391-.484.391-.484s.25-.141.594-.094l4.5-.031c1.359-.172 1.578.453 1.578.453.234.641-.501 2.141-2.344 4.594z"></path>
-          </svg>
-        </symbol>
-      </svg>
+      <div class="pantry__circle" hidden>
+        <svg class="skill" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 110 110" id="">
+          <circle class="skill__circle" r="45" cy="50%" cx="50%"></circle>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="123" height="122" viewBox="0 0 123 122" id="diagram-circle">
+          <defs>
+            <path id="3uzaa" d="M998.89 885.29a59.86 59.86 0 0 1 51.1 91.05 59.87 59.87 0 0 1-51.1 28.6A59.86 59.86 0 0 1 939 945.11a59.86 59.86 0 0 1 59.89-59.82z"></path>
+          </defs>
+          <g>
+            <g transform="translate(-937 -884)">
+              <use fill-opacity="0" stroke="#dfdcd5" stroke-miterlimit="50" stroke-width="30" clip-path="url(&amp;quot;#3uzab&amp;quot;)" xlink:href="#3uzaa"></use>
+            </g>
+          </g>
+        </svg>
+      </div>
     </div>
     <script src="./lib/bundle.js"></script>
   </body>

@@ -3,5 +3,105 @@ extends ../template
 block varibles
     -var title="About me"
 block content
-    include ../common/section-top
-    include ../common/pantry-socials.pug
+    .wrapper
+        section.section.about__hero
+            include ../common/section-top
+        section.section.about__main
+            .about__traingles
+                svg.about__traingles-left(width="100" height="100")
+                    use(xlink:href="img/sprites/sprite.svg#about_bg_left")
+                svg.about__traingles-right(width="100" height="100")
+                    use(xlink:href="img/sprites/sprite.svg#about_bg_right")
+            .about__content
+                .about__content-left
+                    .about__header
+                        svg.about__header-svg
+                            use(xlink:href="img/sprites/sprite.svg#about_header")
+                        h2.about__header-h2 Обо&nbsp;мне
+                    .about__information
+                        .about__information-picture(style="background-image: url('img/content/dude.jpg')")
+                            img.about__information-img(src="img/content/dude.jpg", alt="web developer" hidden)
+                        .about__information-content
+                            h3.about__information-header Кто я
+                            article.about__information-text
+                                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                .about__content-right
+                    .about__profit
+                        h3.about__profit-header Чем я могу быть вам полезен
+                        p.about__profit-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                    .about__diagrams
+                        ul.about__diagrams-content
+                            li.about__diagrams-row
+                                h3.about__diagrams-header Frontend
+                                ul.about__diagrams-list
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title HTML5
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title CSS3
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title JavaScript
+                            li.about__diagrams-row
+                                h3.about__diagrams-header Backend
+                                ul.about__diagrams-list
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title PHP
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title mySQL
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title Node.js & npm
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title Mongo.db
+                            li.about__diagrams-row
+                                h3.about__diagrams-header WorkFlow
+                                ul.about__diagrams-list
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title Git
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title Gulp
+                                    li.about__diagrams-item
+                                        svg.about__diagrams-svg(width="100" height="100")
+                                            use(xlink:href="#diagram-circle")
+                                        span.about__diagrams-title Bower
+        section.section.about__map
+            .about__map-box
+                h2.about__map-header Контакты
+                ul.about__map-list
+                    li.about__map-item
+                        svg.about__map-svg(width="24" height="24")
+                            use(xlink:href="img/sprites/sprite.svg#skype")
+                        a.about__map-link(href="") skype_kdn
+                    li.about__map-item
+                        svg.about__map-svg(width="23" height="16")
+                            use(xlink:href="img/sprites/sprite.svg#envelope2")
+                        a.about__map-link(href="") astahov@gmail.com
+                    li.about__map-item
+                        svg.about__map-svg(width="17" height="20")
+                            use(xlink:href="img/sprites/sprite.svg#phone2")
+                        a.about__map-link(href="") +7 931 200 93 24
+                    li.about__map-item
+                        svg.about__map-svg(width="16" height="21")
+                            use(xlink:href="img/sprites/sprite.svg#map_marker")
+                        a.about__map-link(href="") Новосибирск, ул. Инская, д.14
+        footer.about__footer
+            include ../common/footer
+        include ../common/pantry-socials.pug
+        include ../common/pantry-circles.pug

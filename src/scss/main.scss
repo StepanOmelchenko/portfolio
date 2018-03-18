@@ -1,11 +1,13 @@
+@import "./config/variables.scss";
 @import "./layout/normolize.scss";
 @import "./layout/fonts.scss";
-@import "./config/variables.scss";
 @import "./layout/base.scss";
 @import "./blocks/welcome.scss";
+@import "./blocks/about.scss";
 @import "./blocks/works.scss";
-@import "./blocks/lists.scss";
-@import "./blocks/btns.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/authorization-btn.scss";
+@import "./blocks/hamburger.scss";
 @import "./blocks/info.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/section-top.scss";
