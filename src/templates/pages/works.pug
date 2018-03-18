@@ -8,8 +8,8 @@ block content
             include ../common/section-top    
         .works-second
             .works-second__traingle
-                svg.works-second__svg
-                    use(xlink:href="#works__traingle")
+                include ../common/traingle.pug                
+                +traingle("traingles--works")
             .works-second__top
                 svg.works-second__top-svg(width="100%")
                     use(xlink:href="img/sprites/sprite.svg#works_header")

@@ -1,0 +1,19 @@
+.traingles{
+    width: 100%;
+
+    &--works{        
+        fill: #f8f9f5;
+    }
+
+    &--about .traingles__left{
+        fill: #ebefe2;
+    }
+
+    &--about .traingles__right{
+        fill: #f4f5f0;
+    }
+
+    &--blog{
+        fill: #faf8f0;
+    }
+}

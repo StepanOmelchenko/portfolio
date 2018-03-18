@@ -8,10 +8,8 @@ block content
             include ../common/section-top
         section.section.about__main
             .about__traingles
-                svg.about__traingles-left(width="100" height="100")
-                    use(xlink:href="img/sprites/sprite.svg#about_bg_left")
-                svg.about__traingles-right(width="100" height="100")
-                    use(xlink:href="img/sprites/sprite.svg#about_bg_right")
+                include ../common/traingle.pug                
+                +traingle("traingles--about")
             .about__content
                 .about__content-left
                     .about__header
