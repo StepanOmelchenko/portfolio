@@ -1,4 +1,4 @@
-.section-top{
+.hero{
     width: 100%;
     height: 100%;
     color: #fff;
@@ -35,17 +35,23 @@
         margin-right: 30px;
     }
 
-    &__container{
-
-    }
-
     &__next{
         margin-bottom: 3%;
+        z-index: 10;
+        transition: transform .2s;
         
         &-svg{
             fill: $white;
             opacity: .7;
         }
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    &__hidden{
+        visibility: hidden;
     }
 
 }

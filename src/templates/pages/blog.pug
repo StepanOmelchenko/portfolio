@@ -4,8 +4,9 @@ block varibles
     -var title="My blog"
 block content
     .wrapper.blog
-        section.section.blog__hero
-            include ../common/section-top
+        section.blog__hero
+            include ../common/hero
+            +hero("hero__hidden")
         section.blog__wrapper
             .blog__main
                 .blog__traingles

@@ -4,8 +4,9 @@ block varibles
     -var title="My works"
 block content
     div.wrapper
-        section(class="section works-first")
-            include ../common/section-top    
+        section.section.works-first
+            include ../common/hero
+            +hero("hero__next")
         .works-second
             .works-second__traingle
                 include ../common/traingle.pug                
@@ -33,11 +34,11 @@ block content
                         a.slider__down(href="#" style="background-image: url('img/slider/1.png')")
                             .slider__down-btn
                                 svg.slider__down-svg(width="43" height="27")
-                                    use(xlink:href="#arrow-down")
+                                    use(xlink:href="img/sprites/sprite.svg#portf_arrow_down")
                         a.slider__up(href="#" style="background-image: url('img/slider/2.png')")
                             .slider__up-btn
                                 svg.slider__up-svg(width="43" height="27")
-                                    use(xlink:href="#arrow-down")
+                                    use(xlink:href="img/sprites/sprite.svg#portf_arrow_up")
         section.works-about
             .works-about__rumors
                 .works-about__top
@@ -83,4 +84,3 @@ block content
         footer.works__footer
             include ../common/footer
         include ../common/pantry-socials.pug
-        include ../common/pantry-traingles.pug

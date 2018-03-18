@@ -128,12 +128,12 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);           
-            transition: scale .2s;
+            transform: translate(-50%, -50%);
         }
 
         &-svg{
-            fill: $white; 
+            fill: $white;
+            transition: transform .2s; 
         }
 
         &:hover &-svg{
@@ -143,10 +143,6 @@
     }
 
     &__up{
-
-        &-btn{
-            transform: translate(-50%, -50%) rotate(180deg);
-        }
 
         &:before{
             background-color: rgba(147, 153, 141, 0.7);
