@@ -23,4 +23,25 @@
         margin-bottom: 35px;
         opacity: .6;
     }
+
+    &__blog-title{
+        position: relative;
+        margin-bottom: 60px;
+        font-family: "sansus_webissimoregular", Arial, Helvetica, sans-serif;
+        font-size: 63px;       
+        color: $white;
+        text-transform: uppercase;
+
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 90px;
+            height: 3px;
+            background-color: $white;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }

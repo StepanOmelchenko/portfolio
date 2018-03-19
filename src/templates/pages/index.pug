@@ -13,16 +13,17 @@ block content
                         div(class="welcome__content")
                             div(class="welcome__info")
                                 include ../common/info.pug
+                                +info("common")
                             div(class="welcome__content-socials socials")
                                 include ../common/socials.pug
-                        nav(class="welcome-navigation")
-                            ul(class="welcome-navigation__list")
-                                li(class="welcome-navigation__item")
-                                    a(class="welcome-navigation__link" href="works.html") Мои работы
-                                li(class="welcome-navigation__item")
-                                    a(class="welcome-navigation__link" href="about.html") Обо мне
-                                li(class="welcome-navigation__item")
-                                    a(class="welcome-navigation__link" href="blog.html") Блог
+                        nav(class="welcome__navigation")
+                            ul(class="welcome__navigation-list")
+                                li(class="welcome__navigation-item")
+                                    a(class="welcome__navigation-link" href="works.html") Мои работы
+                                li(class="welcome__navigation-item")
+                                    a(class="welcome__navigation-link" href="about.html") Обо мне
+                                li(class="welcome__navigation-item")
+                                    a(class="welcome__navigation-link" href="blog.html") Блог
                 footer(class="welcome__footer")
                     p(class="welcome__footer-signature") © Омельченко Степан | создано с любовью в LoftSchool | 2018
     include ../common/pantry-socials.pug

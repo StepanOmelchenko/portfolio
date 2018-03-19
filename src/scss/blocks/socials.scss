@@ -22,6 +22,7 @@
         height: 24px;
         fill: $white;
         opacity: .5;
+        transition: fill .2s;
       
         &:hover{
             fill: #4e8839;

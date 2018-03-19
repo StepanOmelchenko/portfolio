@@ -1,4 +1,4 @@
-mixin hero(heroType)
+mixin hero(heroArrowType, isBlog)
     section.hero
         div.hero__inner
             header.hero__header
@@ -6,9 +6,16 @@ mixin hero(heroType)
                     include socials
                 div.hero__menu
                     include hamburger
-            div.hero__container
+            if isBlog == "blog"
+                svg.hero__svg.hero__svg--blog
+                    use(xlink:href="img/sprites/sprite.svg#blog_header")
+            else
+                svg.hero__svg
+                    use(xlink:href="img/sprites/sprite.svg#portfolio_header")
+            div.hero__container                
                 include info
-            div(class=`${heroType}`)
+                +info(isBlog)
+            div(class=`${heroArrowType}`)
                 a.hero__next-link(href="#")
                     svg.hero__next-svg(width="26" height="16")
                         use(xlink:href="img/sprites/sprite.svg#arrow_down")

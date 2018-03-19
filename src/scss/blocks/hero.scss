@@ -15,9 +15,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        background-image: url("../img/png/portfolio-header.png");
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     &__header{
@@ -33,6 +30,25 @@
 
     &__menu{
         margin-right: 30px;
+    }
+
+    &__svg{
+        fill: $white;
+        opacity: .1;
+        width: 70%;
+        height: 70%;
+    }
+
+    &__svg--blog{
+        width: 40%;
+        height: 40%;
+    }
+
+    &__container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &__next{

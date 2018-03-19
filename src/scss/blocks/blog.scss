@@ -3,7 +3,8 @@
 
     &__hero{
         width: 100%;
-        height: 60vh;
+        height: 70vh;
+        min-height: 650px;
         
         & .socials__svg{
             opacity: 1;
