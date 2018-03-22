@@ -212,7 +212,7 @@
         fill: #dfdcd5;
 
         & .skill__circle{
-            stroke: grey;
+            stroke: #6c9c5a;
             stroke-width: 10;
         }
     }
@@ -235,6 +235,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        padding-bottom: 10%;
     }
 
     &__map-box{
