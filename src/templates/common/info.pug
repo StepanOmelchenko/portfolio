@@ -1,10 +1,17 @@
-mixin info(ifBlog)
+mixin info(headerType)
     div(class="info")
         div(class="info__wrapper")
             img(class="info__img" src="img/content/foto.jpg" alt="Omelchenko Stepan, web developer" hidden)
-        if isBlog == "blog"
-            h1.info__blog-title Блог
-            p.info__blog-text Статьи, которые я написал
+        
+        if headerType == "blog"
+            .info__content.info__content--blog
+                h1.info__blog-title Блог
+                p.info__blog-text Статьи, которые я написал
+        else if headerType == "welcome"
+            .info__content.info__content--welcome
+                h1.info__header.info__header--welcome Омельченко Степан
+                p.info__subscribe Личный сайт веб разработчика
         else
-            h1(class="info__header") Омельченко Степан
-            p(class="info__subscribe") Личный сайт веб разработчика
+            .info__content
+                h1.info__header Омельченко Степан
+                p.info__subscribe Личный сайт веб разработчика

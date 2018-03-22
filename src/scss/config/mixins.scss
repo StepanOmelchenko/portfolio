@@ -1,0 +1,33 @@
+@function rem($px) {
+    @return $px / $font-size + 0rem;
+}
+  
+@mixin desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+  
+@mixin horizontal{
+    @media (max-width: 980px) {
+        @content;
+    }
+}
+  
+@mixin tablets{
+    @media (max-width: 780px) {
+        @content;
+    }
+}
+  
+@mixin phones{
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+  
+@mixin min-height{
+    @media (max-height: 700px){
+        @content;
+    }
+}

@@ -26,7 +26,7 @@
         &__top{
             position: relative;
             width: 100%;
-            padding: 40px 0;
+            padding: 16px 0;
             background-color: #f8f9f5;
             text-align: center;
 
@@ -72,6 +72,7 @@
         padding: 70px 0 260px 0;
         background-image: url("../img/bg/works-about.jpg");
         background-position: bottom;
+        background-size: cover;
         background-repeat: no-repeat;
         background-color: #fff;
 
@@ -94,7 +95,7 @@
 
         &__header{
             position: absolute;
-            width: 330px;
+            width: 400px;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -102,13 +103,15 @@
             font-family: "sansus_webissimoregular", Arial, Helvetica, sans-serif;
             font-weight: 400;
             font-size: 63px;
+            line-height: 66px;
             color: #373e42;
+            text-transform: uppercase;
 
             &:after{
                 content: "";
                 display: block;
                 position: absolute;
-                width: 30%;
+                width: 24%;
                 height: 3px;
                 background-color: #373e42;
                 bottom: -30px;
@@ -153,11 +156,13 @@
 
         &__reviews-text{
             color: #5d5a55;
-            margin-bottom: 30px;
+            line-height: 26px;
         }
 
         &__reviews-signature{
             text-align: center;
+            margin-top: 16px;
+            line-height: 24px;
         }
 
         &__reviews-name{

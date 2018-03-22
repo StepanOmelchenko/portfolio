@@ -48,13 +48,11 @@
     
     &__content{
         padding-top: 40px;
-
-        &-socials{
-            margin-bottom: 40px;
-        }
     }
     
-
+    &__content-socials{
+        margin: 33px 0;
+    }
 
     &__navigation{
         width: 100%;

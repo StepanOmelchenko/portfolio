@@ -5,28 +5,44 @@
         display: inline-block;
         width: 141px;
         height: 141px;
-        margin-bottom: 20px;
         border-radius: 50%;
         background-image: url("../img/content/foto.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    &__content{        
+        margin-top: 24px;
+    }
+
+    &__content--welcome{
+        margin-top: 14px;
+    }
+
+    &__content--blog{
+        margin-top: 14px;
+    }
     
     &__header{
+        display: inline-block;
         font-family: 'robotomedium', Arial, Helvetica, sans-serif;
-        font-size: 28px;
+        font-size: 35px;
         font-weight: 500;
-        margin-bottom: 9px;
+        line-height: 28px;
+    }
+
+    &__header--welcome{
+        font-size: 28px;
     }
     
     &__subscribe{
-        margin-bottom: 35px;
+        margin-top: 9px;
         opacity: .6;
     }
 
     &__blog-title{
         position: relative;
-        margin-bottom: 60px;
+        margin-bottom: 45px;
         font-family: "sansus_webissimoregular", Arial, Helvetica, sans-serif;
         font-size: 63px;       
         color: $white;
@@ -39,7 +55,7 @@
             width: 90px;
             height: 3px;
             background-color: $white;
-            bottom: -30px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
         }
