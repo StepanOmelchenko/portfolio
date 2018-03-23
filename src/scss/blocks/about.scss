@@ -180,7 +180,7 @@
 
     &__diagrams-row{
         flex: 1;
-        margin-top: 40px;
+        margin-top: 30px;
 
         &:first-child{
             margin-top: 0;
@@ -199,15 +199,11 @@
 
     &__diagrams-item{
         position: relative;
-        margin-right: 40px;
+        margin-right: 30px;
 
         &:last-child{
             margin-right: 0;
         }
-    }
-
-    &__diagrams-svg{
-        
     }
 
     &__diagrams-title{
