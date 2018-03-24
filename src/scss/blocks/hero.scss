@@ -22,14 +22,26 @@
         padding-top: 30px;
         display: flex;
         justify-content: space-between;
+
+        @include phones{
+            padding-top: 10px;
+        }
     }
 
     &__socials{
         margin-left: 30px;
+
+        @include phones{
+            margin-left: 10px;
+        }
     }
 
     &__menu{
         margin-right: 30px;
+
+        @include phones{
+            margin-right: 10px;
+        }
     }
 
     &__svg{
@@ -49,6 +61,10 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
+        @include phones{
+            width: 95%;
+        }
     }
 
     &__next{

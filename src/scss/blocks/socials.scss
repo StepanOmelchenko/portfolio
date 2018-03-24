@@ -31,5 +31,10 @@
         &:hover{
             fill: #4e8839;
         }
+
+        @include phones{
+            height: 17px;
+            width: 24px;
+        }
     }
   }

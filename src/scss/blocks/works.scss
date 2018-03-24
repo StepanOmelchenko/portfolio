@@ -48,16 +48,29 @@
             font-weight: 400;
             text-transform: uppercase;
 
+            @include tablets{
+                font-size: 48px;
+            }
+
+            @include phones{
+                width: 100%;
+                font-size: 35px;
+            }
+
             &:after{
                 content: "";
                 display: block;
                 position: absolute;
-                width: 30%;
-                height: 5%;
+                width: 60px;
+                height: 3px;
                 background-color: #373e42;
-                bottom: -30%;
+                bottom: -25px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @include tablets{
+                    bottom: -15px;
+                }
             }
 
         }
@@ -75,25 +88,38 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-color: #fff;
+        overflow: hidden;
+    }
+       
 
-        &__rumors{
+    &-about__rumors{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 70px;
-        }
+            width: 50%;
 
-        &__top{
+            @include desktops{
+                width: 65%;
+            }
+
+            @include horizontal{
+                width: 95%;
+            }
+    }
+
+    &-about__top{
             position: relative;
             margin-bottom: 72px;
-        }
+    }
 
-        &__top-svg{
+    &-about__top-svg{
             fill: #93c42e;
             opacity: .1;
-        }
+            width: 100%;
+    }
 
-        &__header{
+    &-about__header{
             position: absolute;
             width: 400px;
             left: 50%;
@@ -107,6 +133,17 @@
             color: #373e42;
             text-transform: uppercase;
 
+            @include tablets{
+                font-size: 48px;
+                line-height: 52px;
+            }
+
+            @include phones{
+                width: 80%;
+                font-size: 35px;
+                line-height: 41px;
+            }
+
             &:after{
                 content: "";
                 display: block;
@@ -117,67 +154,93 @@
                 bottom: -30px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @include tablets{
+                    bottom: -15px;
+                }
             }
-        }
+    }
 
-        &__reviews{
-            width: 80%;
-        }
+    &-about__reviews{
+        width: 100%;
 
-        &__reviews-list{
-            display: flex;
+        @include phones{
+            width: 95%;
         }
+    }
 
-        &__reviews-item{
-            display: flex;
+    &-about__reviews-list{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include phones{
             flex-direction: column;
-            align-items: center;
-            max-width: 460px;
-            margin-right: 25px;
+        } 
+    }   
 
-            &:last-child{
-                margin-right: 0;
-            }
+    &-about__reviews-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 380px;
+
+        @include phones {
+            max-width: 100%;
         }
+    }
 
-        &__reviews-picture{
-            width: 77px;
-            height: 77px;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            background-position: center;
-            background-repeat: no-repeat;
+    &-about__reviews-picture{
+        width: 77px;
+        height: 77px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include miniphones{
+            margin-bottom: 17px;
+            width: 51px;
+            height: 51px;
         }
+    }
 
-        &__reviews-info{
-            font-family: 'robotobold_italic', Arial, Helvetica, sans-serif;
-        }
+    &-about__reviews-info{
+        font-family: 'robotobold_italic', Arial, Helvetica, sans-serif;
+    }
 
-        &__reviews-text{
-            color: #5d5a55;
-            line-height: 26px;
-        }
+    &-about__reviews-text{
+        color: #5d5a55;
+        line-height: 26px;
 
-        &__reviews-signature{
-            text-align: center;
-            margin-top: 16px;
+        @include tablets{
             line-height: 24px;
         }
+    }
 
-        &__reviews-name{
+    &-about__reviews-signature{
+        text-align: center;
+        margin-top: 16px;
+        line-height: 24px;
+    }
+
+    &-about__reviews-name{
             color: #4e8839;
             font-weight: 700;
-        }
+    }
 
-        &__reviews-position{
+    &-about__reviews-position{
             color: #373e42;
-        }
-
     }
 
     &-about__form{
         margin-bottom: 70px;
+
+        @include phones{
+            width: 95%;
+        }
     }
 
     &-about__btn{

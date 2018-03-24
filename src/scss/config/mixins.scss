@@ -1,9 +1,21 @@
 @function rem($px) {
     @return $px / $font-size + 0rem;
 }
-  
+
+@mixin desktops-hight {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+
 @mixin desktops {
     @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktops-low{
+    @media (max-width: 1100px) {
         @content;
     }
 }
@@ -21,7 +33,7 @@
 }
   
 @mixin phones{
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
         @content;
     }
 }
