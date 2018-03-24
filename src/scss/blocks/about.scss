@@ -16,13 +16,30 @@
         left: 0;
         bottom: 98%;
         right: 0;
-        width: 100%; 
+        width: 100%;
+
+        @include desktops{
+            bottom: 99%;
+        }
+
+        @include horizontal{
+            bottom: 99.5%;
+        }
+
+        @include phones{
+            bottom: 99.7%;
+        }
     }
 
     &__content{
         width: 100%;
         height: 100%;
         display: flex;
+
+        @include horizontal{
+            flex-direction: column;
+            height: min-content;
+        }
     }
 
     &__content-left,
@@ -30,17 +47,28 @@
         width: 50%;
         display: flex;
         padding-bottom: 45px;
+
+        @include horizontal{
+            width: 100%;
+        }
     }
 
     &__content-left{
         background-color: #ebefe2;
        
+        @include desktops{
+            flex-direction: column;
+        }
     }
 
     &__header{
         position: relative;
         flex: 1;
         height: min-content;
+
+        @include desktops{
+            flex: 0;
+        }
     }
 
     &__header-svg{
@@ -70,6 +98,14 @@
             bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include tablets{
+                bottom: -15px;
+            }
+        }
+
+        @include tablets{
+            font-size: 49px;
         }
     }
 
@@ -77,12 +113,35 @@
         flex: 1;
         overflow: hidden;
         padding: 0 10px;
+
+        @include desktops{
+            width: 472px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include phones{
+            width: 100%;
+        }
+        
     }
 
     &__information-picture{
         width: 100%;
         min-height: 350px;
         background-size: cover;
+
+        @include horizontal {
+            height: 416px;
+            width: 463px;
+        }
+
+        @include phones{
+            width: 100%;
+            height: 283px;
+        }
     }
 
     &__information-content{
@@ -99,17 +158,32 @@
         color: #566358;
         text-transform: uppercase;
 
+        @include tablets{
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        @include phones{
+            font-size: 21px;
+        }
+
         &:after{
             content: "";
             display: block;
             position: absolute;
-            width: 100%;
+            width: 60px;
             height: 3px;
             background-color: #566358;
             bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include tablets{
+                bottom: -20px;
+            }
         }
+
+        
     }
 
     &__information-text{
@@ -130,6 +204,15 @@
         flex-direction: column;
         padding-left: 40px;
         background-color: #f4f5f0;
+
+        @include desktops-low{
+            padding-left: 15px;
+        }
+
+        @include horizontal{
+            padding-top: 40px;
+            padding-left: 0;
+        }
     }
 
     &__profit-header{
@@ -145,6 +228,15 @@
         text-transform: uppercase;
         text-align: center;
 
+        @include tablets{
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        @include phones{
+            font-size: 21px;
+        }
+
         &:after{
             content: "";
             display: block;
@@ -155,12 +247,25 @@
             bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include tablets{
+                bottom: -20px;
+            }
         }
     }
 
     &__profit-text{
         color: #566358;
         line-height: 24px;
+
+        @include horizontal{
+            width: 472px;
+            margin: 0 auto;
+        }
+
+        @include phones{
+            width: 95%;
+        }
     }
 
     &__diagrams{
@@ -168,6 +273,10 @@
         height: 100%;
         margin-top: 55px;
         overflow: hidden;
+
+        @include tablets{
+            margin-top: 40px;
+        }
     }
 
     &__diagrams-content{
@@ -176,11 +285,30 @@
         justify-content: space-around;
         width: 100%;
         height: 100%;
+
+        @include horizontal{
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__diagrams-row{
         flex: 1;
         margin-top: 30px;
+
+        @include horizontal{
+            text-align: center;
+            width: min-content;
+        }
+
+        @include tablets{
+            margin-top: 40px;
+        }
+
+        @include phones{
+            width: 100%;
+            margin-top: 20px;
+        }
 
         &:first-child{
             margin-top: 0;
@@ -191,15 +319,32 @@
         color: #566358;
         font-size: 28px;
         margin-bottom: 10px;
+
+        @include tablets{
+            font-size: 21px;
+        }
     }
 
     &__diagrams-list{
         display: flex;
+
+        @include phones{
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     }
 
     &__diagrams-item{
         position: relative;
-        margin-right: 30px;
+        margin-right: 20px;
+
+        @include desktops-low{
+            margin-right: 10px;
+        }
+
+        @include phones{
+            margin-top: 20px;
+        }
 
         &:last-child{
             margin-right: 0;
@@ -225,6 +370,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding-bottom: 10%;
+
+        @include horizontal{
+            padding-bottom: 240px;
+        }
     }
 
     &__map-box{

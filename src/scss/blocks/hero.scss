@@ -84,6 +84,11 @@
 
     &__hidden{
         visibility: hidden;
+
+        @include tablets{
+            visibility: visible;
+            margin-bottom: 15px;
+        }
     }
 
 }

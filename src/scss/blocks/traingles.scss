@@ -11,6 +11,10 @@
 
     &--about .traingles__right{
         fill: #f4f5f0;
+
+        @include horizontal{
+            fill: #ebefe2;
+        }
     }
 
     &--blog{
