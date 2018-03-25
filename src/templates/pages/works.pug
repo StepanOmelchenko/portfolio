@@ -64,19 +64,21 @@ block content
                                     .works-about__reviews-position  — преподаватель
             .works-about__form
                 form.form(id="form" method="POST" action="mail.php")
-                    h2.form__header Связаться со мной
-                    label.form__label(for="name")
-                        input.form__input(type="text" name="name" placeholder="Имя")
-                    label.form__label(for="email")
-                        input.form__input(type="text" name="email" placeholder="Email")
-                    textarea.form__textarea(name="text", cols="30", rows="10" placeholder="Ваше сообщение")
-                    .form__controls
-                        label.form__submit-label
-                            span.form__submit-span Отправить
-                            input.form__submit(type="submit")
-                        label.form__reset-label 
-                            span.form__reset-span Очистить
-                            input.form__reset(type="reset")
+                    .form__blur
+                    .form__inner
+                        h2.form__header Связаться со мной
+                        label.form__label(for="name")
+                            input.form__input(type="text" name="name" placeholder="Имя")
+                        label.form__label(for="email")
+                            input.form__input(type="text" name="email" placeholder="Email")
+                        textarea.form__textarea(name="text", cols="30", rows="10" placeholder="Ваше сообщение")
+                        .form__controls
+                            label.form__submit-label
+                                span.form__submit-span Отправить
+                                input.form__submit(type="submit")
+                            label.form__reset-label 
+                                span.form__reset-span Очистить
+                                input.form__reset(type="reset")
             a.works-about__btn(href="#")
                 svg.works-about__btn-svg(width="43" height="27")
                     use(xlink:href="#arrow-down")

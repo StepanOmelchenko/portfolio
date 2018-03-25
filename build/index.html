@@ -15,43 +15,78 @@
         <div class="welcome__container">
           <header class="welcome__header"><a class="welcome__header-link authorization-btn" href="#">Авторизаваться</a></header>
           <div class="welcome__box">
-            <div class="welcome__box-inner">
-              <div class="welcome__content">
-                <div class="welcome__info">
-                                    <div class="info">
-                                      <div class="info__wrapper"><img class="info__img" src="img/content/foto.jpg" alt="Omelchenko Stepan, web developer" hidden></div>
-                                      <div class="info__content info__content--welcome">
-                                        <h1 class="info__header info__header--welcome">Омельченко Степан</h1>
-                                        <p class="info__subscribe">Личный сайт веб разработчика</p>
-                                      </div>
-                                    </div>
-                </div>
-                <div class="welcome__content-socials socials">
-                  <div class="socials">
-                    <ul class="socials__list">
-                      <li class="socials__item"><a class="socials__link" href="#">
-                          <svg class="socials__svg" fill="none">
-                            <use xlink:href="#vk"></use>
-                          </svg></a></li>
-                      <li class="socials__item"><a class="socials__link" href="#">
-                          <svg class="socials__svg" fill="none">
-                            <use xlink:href="#git"></use>
-                          </svg></a></li>
-                      <li class="socials__item"><a class="socials__link" href="#">
-                          <svg class="socials__svg" fill="none">
-                            <use xlink:href="#in"></use>
-                          </svg></a></li>
-                    </ul>
+            <div class="welcome__flipper-container">
+              <div class="welcome__flipper">
+                <div class="welcome__hero">
+                  <div class="welcome__content">
+                    <div class="welcome__info">
+                                            <div class="info">
+                                              <div class="info__wrapper"><img class="info__img" src="img/content/foto.jpg" alt="Omelchenko Stepan, web developer" hidden></div>
+                                              <div class="info__content info__content--welcome">
+                                                <h1 class="info__header info__header--welcome">Омельченко Степан</h1>
+                                                <p class="info__subscribe">Личный сайт веб разработчика</p>
+                                              </div>
+                                            </div>
+                    </div>
+                    <div class="welcome__content-socials socials">
+                      <div class="socials">
+                        <ul class="socials__list">
+                          <li class="socials__item"><a class="socials__link" href="#">
+                              <svg class="socials__svg" fill="none">
+                                <use xlink:href="#vk"></use>
+                              </svg></a></li>
+                          <li class="socials__item"><a class="socials__link" href="#">
+                              <svg class="socials__svg" fill="none">
+                                <use xlink:href="#git"></use>
+                              </svg></a></li>
+                          <li class="socials__item"><a class="socials__link" href="#">
+                              <svg class="socials__svg" fill="none">
+                                <use xlink:href="#in"></use>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
+                  <nav class="welcome__navigation">
+                    <ul class="welcome__navigation-list">
+                      <li class="welcome__navigation-item"><a class="welcome__navigation-link" href="works.html">Мои работы</a></li>
+                      <li class="welcome__navigation-item"><a class="welcome__navigation-link" href="about.html">Обо мне</a></li>
+                      <li class="welcome__navigation-item"><a class="welcome__navigation-link" href="blog.html">Блог</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="welcome__autorization">
+                  <form class="login" id="login" method="POST" action="main.php">
+                    <h2 class="login__header">Авторизуйтесь</h2>
+                    <label class="login__label" for="login">
+                      <input class="login__input" type="text" name="login" placeholder="Имя">
+                    </label>
+                    <label class="login__label" for="pass">
+                      <input class="login__input" type="text" name="pass" placeholder="Пароль">
+                    </label>
+                    <label class="login__label" for="check">
+                      <input class="login__check" type="checkbox" name="check" checked><span class="login__check-img"></span><span class="login__check-span">Я человек</span>
+                    </label>
+                    <p class="login__text">Вы точно не робот?</p>
+                    <div class="login__radios">
+                      <label class="login__radios-label" for="yes">
+                        <input class="login__radio" type="radio" name="yes"><span class="login__radio-img"></span><span class="login__radio-span">ДА</span>
+                      </label>
+                      <label class="login__radios-label" for="no">
+                        <input class="login__radio" type="radio" name="no"><span class="login__radio-img"></span><span class="login__radio-span">Не уверен </span>
+                      </label>
+                    </div>
+                    <div class="login__controls">
+                      <label class="login__back-label"><span class="login__back-span">Отправить</span>
+                        <input class="login__back" type="button">
+                      </label>
+                      <label class="login__submit-label"> <span class="login__submit-span">Очистить</span>
+                        <input class="login__submit" type="submit">
+                      </label>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <nav class="welcome__navigation">
-                <ul class="welcome__navigation-list">
-                  <li class="welcome__navigation-item"><a class="welcome__navigation-link" href="works.html">Мои работы</a></li>
-                  <li class="welcome__navigation-item"><a class="welcome__navigation-link" href="about.html">Обо мне</a></li>
-                  <li class="welcome__navigation-item"><a class="welcome__navigation-link" href="blog.html">Блог</a></li>
-                </ul>
-              </nav>
             </div>
           </div>
           <footer class="welcome__footer">

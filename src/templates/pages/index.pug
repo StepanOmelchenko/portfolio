@@ -3,29 +3,59 @@ extends ../template
 block varibles
     -var title="Welcome Page"
 block content
-    section(class="welcome section")
+    section.welcome.section
         canvas.welcome__canvas
-        div(class="welcome__inner")
-            div(class="welcome__container")
-                header(class="welcome__header")
-                    a(class="welcome__header-link authorization-btn" href="#") Авторизаваться
-                div(class="welcome__box")
-                    div(class="welcome__box-inner")
-                        div(class="welcome__content")
-                            div(class="welcome__info")
-                                include ../common/info.pug
-                                +info("welcome")
-                            div(class="welcome__content-socials socials")
-                                include ../common/socials.pug
-                        nav(class="welcome__navigation")
-                            ul(class="welcome__navigation-list")
-                                li(class="welcome__navigation-item")
-                                    a(class="welcome__navigation-link" href="works.html") Мои работы
-                                li(class="welcome__navigation-item")
-                                    a(class="welcome__navigation-link" href="about.html") Обо мне
-                                li(class="welcome__navigation-item")
-                                    a(class="welcome__navigation-link" href="blog.html") Блог
-                footer(class="welcome__footer")
-                    p(class="welcome__footer-signature") © Омельченко Степан | создано с любовью в LoftSchool | 2018
+        .welcome__inner
+            .welcome__container
+                header.welcome__header
+                    a.welcome__header-link.authorization-btn(href="#") Авторизаваться
+                .welcome__box
+                    .welcome__flipper-container
+                        .welcome__flipper
+                            .welcome__hero
+                                .welcome__content
+                                    .welcome__info
+                                        include ../common/info.pug
+                                        +info("welcome")
+                                    .welcome__content-socials.socials
+                                        include ../common/socials.pug
+                                nav.welcome__navigation
+                                    ul.welcome__navigation-list
+                                        li.welcome__navigation-item
+                                            a.welcome__navigation-link(href="works.html") Мои работы
+                                        li.welcome__navigation-item
+                                            a.welcome__navigation-link(href="about.html") Обо мне
+                                        li.welcome__navigation-item
+                                            a.welcome__navigation-link(href="blog.html") Блог
+                            .welcome__autorization
+                                form.login(id="login" method="POST" action="main.php")
+                                    h2.login__header Авторизуйтесь
+                                    label.login__label(for="login")
+                                        input.login__input(type="text" name="login" placeholder="Имя")
+                                    label.login__label(for="pass")
+                                        input.login__input(type="text" name="pass" placeholder="Пароль")
+                                    label.login__label(for="check")
+                                        input.login__check(type="checkbox" name="check" checked)
+                                        span.login__check-img
+                                        span.login__check-span Я человек
+                                    p.login__text Вы точно не робот?
+                                    .login__radios
+                                        label.login__radios-label(for="yes")
+                                            input.login__radio(type="radio" name="yes")
+                                            span.login__radio-img
+                                            span.login__radio-span ДА
+                                        label.login__radios-label(for="no")
+                                            input.login__radio(type="radio" name="no")
+                                            span.login__radio-img
+                                            span.login__radio-span Не уверен 
+                                    .login__controls
+                                        label.login__back-label
+                                            span.login__back-span Отправить
+                                            input.login__back(type="button")
+                                        label.login__submit-label 
+                                            span.login__submit-span Очистить
+                                            input.login__submit(type="submit")
+                footer.welcome__footer
+                    p.welcome__footer-signature © Омельченко Степан | создано с любовью в LoftSchool | 2018
     include ../common/pantry-socials.pug
                     

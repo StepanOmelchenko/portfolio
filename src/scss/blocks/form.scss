@@ -1,11 +1,9 @@
 .form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
     width: 380px;
-    background-color: rgba(218, 219, 214, .6);
     border-radius: 5px;
     padding-top: 30px;
+    z-index: 0;
 
     @include horizontal{
         width: 350px;
@@ -13,6 +11,25 @@
 
     @include phones{
         width: 100%;
+    }
+
+    &__blur{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(218, 219, 214, .6);
+        filter: blur(5px);
+        z-index: -1;
+    }
+
+    &__inner{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
     }
 
     &__header{

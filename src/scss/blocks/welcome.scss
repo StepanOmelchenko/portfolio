@@ -67,15 +67,10 @@
         }
     }
 
-    &__box-inner{
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
+    &__flipper-container{
         width: 380px;
-        border-radius: 5px;
-        background-color: rgba(18, 38, 32, .6);
-        transition: width .2s;
+        height: 395px;
+        perspective: 1000px;
 
         @include tablets{
             width: 348px;
@@ -86,9 +81,44 @@
         }
 
         @include miniphones{
-            width: 100%;
+            width: 280px;
         }
-    }    
+    }
+
+    &__flipper{
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform .4s;
+        backface-visibility: hidden;
+    }
+
+    &__flipper--active{
+        transform: rotateY(180deg);
+    }
+
+    &__hero,
+    &__autorization{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    &__hero{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        background-color: rgba(18, 38, 32, .6);
+        transition: width .2s;        
+    }
+    
+    &__autorization{
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
     
     &__content{
         padding-top: 40px;
