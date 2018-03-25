@@ -48,6 +48,7 @@
     &__sidebar{
         flex-basis: 30%;
         padding-top: 15px;
+        padding: 0 3%;
 
         @include tablets{
             display: none;
@@ -55,7 +56,7 @@
     }
 
     &__navigation{
-        width: 70%;
+       /*  width: 70%; */
         margin: 0 auto;
 
         @include desktops-low{
