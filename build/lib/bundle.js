@@ -71,15 +71,15 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/lib/index.js":
-/*!**************************!*\
-  !*** ./src/lib/index.js ***!
-  \**************************/
+/***/ "./src/lib/hamburger.js":
+/*!******************************!*\
+  !*** ./src/lib/hamburger.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nwindow.onload = function () {};\n\n//# sourceURL=webpack:///./src/lib/index.js?");
+eval("\n\nwindow.onload = function () {\n    var hamburger = document.querySelector('.hamburger');\n\n    hamburger.addEventListener('click', function (e) {\n        e.preventDefault();\n        console.log('hello from hamburger');\n        hamburger.classList.toggle('hamburger--active');\n    });\n};\n\n//# sourceURL=webpack:///./src/lib/hamburger.js?");
 
 /***/ }),
 
@@ -96,13 +96,13 @@ eval("var _typeof=typeof Symbol===\"function\"&&typeof Symbol.iterator===\"symbo
 /***/ }),
 
 /***/ 0:
-/*!***************************************************!*\
-  !*** multi ./src/lib/index.js ./src/lib/water.js ***!
-  \***************************************************/
+/*!*******************************************************!*\
+  !*** multi ./src/lib/hamburger.js ./src/lib/water.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\index.js */\"./src/lib/index.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/index.js_./src/lib/water.js?");
+eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\hamburger.js */\"./src/lib/hamburger.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/hamburger.js_./src/lib/water.js?");
 
 /***/ })
 
