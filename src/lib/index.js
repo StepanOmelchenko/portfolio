@@ -1,9 +1,3 @@
-const test = (string) => {
-    return () => {
-        console.log(`вот он ${string}`);
-    };
+window.onload = function() {
+
 };
-
-var alarm = test('тест');
-
-alarm();
