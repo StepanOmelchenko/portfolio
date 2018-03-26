@@ -54,7 +54,7 @@
     }
 
     if (articlesList && articles.length) {
-         articlesList.style.width = '300px' /* articlesList.offsetWidth; */ 
+         articlesList.style.width = articlesList.offsetWidth + 'px';
         
         window.onscroll = () => {
             setArticleChords();
