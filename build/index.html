@@ -13,10 +13,10 @@
       <canvas class="welcome__canvas"></canvas>
       <div class="welcome__inner">
         <div class="welcome__container">
-          <header class="welcome__header"><a class="welcome__header-link authorization-btn" href="#">Авторизаваться</a></header>
+          <header class="welcome__header"><a class="welcome__header-link authorization-btn" href="#" id="autr-btn">Авторизаваться</a></header>
           <div class="welcome__box">
             <div class="welcome__flipper-container">
-              <div class="welcome__flipper">
+              <div class="welcome__flipper" id="flipper">
                 <div class="welcome__hero">
                   <div class="welcome__content">
                     <div class="welcome__info">
@@ -64,16 +64,16 @@
                     <label class="login__label" for="pass">
                       <input class="login__input" type="text" name="pass" placeholder="Пароль">
                     </label>
-                    <label class="login__label" for="check">
-                      <input class="login__check" type="checkbox" name="check" checked><span class="login__check-img"></span><span class="login__check-span">Я человек</span>
+                    <label class="login__label login__label--checkbox">
+                      <input class="login__check" type="checkbox" name="check"><span class="login__check-img"></span><span class="login__check-span">Я человек</span>
                     </label>
                     <p class="login__text">Вы точно не робот?</p>
                     <div class="login__radios">
-                      <label class="login__radios-label" for="yes">
+                      <label class="login__radios-label">
                         <input class="login__radio" type="radio" name="yes"><span class="login__radio-img"></span><span class="login__radio-span">ДА</span>
                       </label>
-                      <label class="login__radios-label" for="no">
-                        <input class="login__radio" type="radio" name="no"><span class="login__radio-img"></span><span class="login__radio-span">Не уверен </span>
+                      <label class="login__radios-label">
+                        <input class="login__radio" type="radio" name="yes" checked><span class="login__radio-img"></span><span class="login__radio-span">Не уверен </span>
                       </label>
                     </div>
                     <div class="login__controls">

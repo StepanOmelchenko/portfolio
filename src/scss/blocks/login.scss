@@ -47,6 +47,10 @@
         width: 90%;
         margin-bottom: 20px;
         text-align: center;
+
+        &--checkbox{
+            cursor: pointer;
+        }
     }
 
     &__input{
@@ -64,28 +68,23 @@
     }
 
     &__check{
-        visibility: hidden;
+        display: none;
+
+        &:checked + .login__check-img:after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 25%;
+                    top: 25%;
+                    transform: rotate(-45deg);
+                    width: 8px;
+                    height: 5px;
+                    border-left: 3px solid $white;
+                    border-bottom: 3px solid $white;
+                }
+        
     }
 
-    &__check:checked{
-
-        & + .login__check-img{
-            &:after{
-                content: "";
-                display: block;
-                position: absolute;
-                left: 15%;
-                top: 15%;
-                transform: rotate(-45deg);
-                width: 8px;
-                height: 5px;
-                border-left: 3px solid $white;
-                border-bottom: 3px solid $white;
-            }
-        }
-    
-    
-    }
     
     &__check-img{
         display: inline-block;
@@ -114,33 +113,33 @@
     }
 
     &__radios{
+        width: 100%;
         margin: 10px 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+    }
+
+    &__radios-label{
+        cursor: pointer;
     }
 
     &__radio{
-        visibility: hidden;
-    }
+        display: none;
 
-    &__radio:checked{
-
-        & + .login__radio-img{
-            &:after{
-                content: "";
-                display: block;
-                position: absolute;
-                left: 15%;
-                top: 15%;
-                transform: rotate(-45deg);
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background-color: #6c9c5a;
-            }
+        &:checked + .login__radio-img:after{
+               /*  &:after{ */
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #6c9c5a;
+               /*  } */
         }
-    
-    
     }
     
     &__radio-img{
@@ -161,7 +160,7 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
-                background-color: #6c9c5a;
+                background-color: $white;
             }
     }
 

@@ -8,10 +8,10 @@ block content
         .welcome__inner
             .welcome__container
                 header.welcome__header
-                    a.welcome__header-link.authorization-btn(href="#") Авторизаваться
+                    a.welcome__header-link.authorization-btn(href="#" id="autr-btn") Авторизаваться
                 .welcome__box
                     .welcome__flipper-container
-                        .welcome__flipper
+                        .welcome__flipper(id="flipper")
                             .welcome__hero
                                 .welcome__content
                                     .welcome__info
@@ -34,18 +34,18 @@ block content
                                         input.login__input(type="text" name="login" placeholder="Имя")
                                     label.login__label(for="pass")
                                         input.login__input(type="text" name="pass" placeholder="Пароль")
-                                    label.login__label(for="check")
-                                        input.login__check(type="checkbox" name="check" checked)
+                                    label.login__label.login__label--checkbox
+                                        input.login__check(type="checkbox" name="check")
                                         span.login__check-img
                                         span.login__check-span Я человек
                                     p.login__text Вы точно не робот?
                                     .login__radios
-                                        label.login__radios-label(for="yes")
+                                        label.login__radios-label
                                             input.login__radio(type="radio" name="yes")
                                             span.login__radio-img
                                             span.login__radio-span ДА
-                                        label.login__radios-label(for="no")
-                                            input.login__radio(type="radio" name="no")
+                                        label.login__radios-label
+                                            input.login__radio(type="radio" name="yes" checked)
                                             span.login__radio-img
                                             span.login__radio-span Не уверен 
                                     .login__controls

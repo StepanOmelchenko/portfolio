@@ -89,7 +89,6 @@
         position: relative;
         transform-style: preserve-3d;
         transition: transform .4s;
-        /* backface-visibility: hidden; */
     }
 
     &__flipper--active{
@@ -107,9 +106,9 @@
 
     &__hero{
         display: flex;
-        /* position: relative; */
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         border-radius: 5px;
         background-color: rgba(18, 38, 32, .6);
         transition: width .2s;
@@ -183,22 +182,4 @@
         }
     }
     
-}
-
-.Background {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.Background::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
 }
