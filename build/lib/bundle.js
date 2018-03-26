@@ -71,6 +71,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/lib/about.js":
+/*!**************************!*\
+  !*** ./src/lib/about.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar diagrams = document.querySelector('#diagrams-list');\n\n//console.log(diagrams);\n\nif (diagrams) {\n    window.onscroll = function () {\n        var target = diagrams.getBoundingClientRect().top;\n        var win = window.pageYOffset;\n\n        if (target < win) {\n            console.log('diagrams here');\n        }\n    };\n}\n\n//# sourceURL=webpack:///./src/lib/about.js?");
+
+/***/ }),
+
 /***/ "./src/lib/blog.js":
 /*!*************************!*\
   !*** ./src/lib/blog.js ***!
@@ -79,7 +91,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar articles = document.querySelectorAll('.blog__content-item');\nvar articlesList = document.querySelector('.blog__navigation');\nvar articleTitles = document.querySelectorAll('.blog__navigation-item');\nvar activeArticleId = null;\n\nfunction getCoords(elem) {\n    var box = elem.getBoundingClientRect();\n\n    return {\n        top: box.top + window.pageYOffset,\n        left: box.left + window.pageXOffset\n    };\n}\n\nfunction setArticleActive() {\n    function setActive(artcl) {\n        if (artcl.dataset.idtitle !== activeArticleId) {\n            var allTitles = document.querySelectorAll('.blog__navigation-item');\n            allTitles.forEach(function (title) {\n                title.classList.remove('blog__navigation-item--active');\n            });\n            document.getElementById(artcl.dataset.idtitle).classList.add('blog__navigation-item--active');\n            activeArticleId = artcl.dataset.idtitle;\n        }\n    }\n\n    if (window.pageYOffset < getCoords(articles[0]).top) {\n        setActive(articles[0]);\n    } else if (window.pageYOffset + window.innerHeight === document.body.offsetHeight) {\n        setActive(articles[articles.length - 1]);\n    } else {\n        articles.forEach(function (article) {\n            var elemTop = getCoords(article).top;\n            if (window.pageYOffset > elemTop - 150) {\n                setActive(article);\n            }\n        });\n    }\n}\n\nfunction setArticleChords() {\n    var elemChords = getCoords(articles[0]);\n    /* console.log('elem', elemChords.top);\r\n    console.log('win', window.pageYOffset); */\n    if (window.pageYOffset >= elemChords.top - 30) {\n\n        articlesList.style.position = 'fixed';\n        articlesList.style.top = '30px';\n    } else {\n        articlesList.style.position = 'static';\n    }\n}\n\nif (articlesList && articles.length) {\n    articlesList.style.width = articlesList.offsetWidth + 'px';\n\n    window.onscroll = function () {\n        setArticleChords();\n        setArticleActive();\n    };\n\n    setArticleChords();\n    setArticleActive();\n}\n\n//# sourceURL=webpack:///./src/lib/blog.js?");
+eval("\n\nvar articles = document.querySelectorAll('.blog__content-item');\nvar articlesList = document.querySelector('.blog__navigation');\nvar articleTitles = document.querySelectorAll('.blog__navigation-item');\nvar activeArticleId = null;\n\nfunction getCoords(elem) {\n    var box = elem.getBoundingClientRect();\n\n    return {\n        top: box.top + window.pageYOffset,\n        left: box.left + window.pageXOffset\n    };\n}\n\nfunction setArticleActive() {\n    function setActive(artcl) {\n        if (artcl.dataset.idtitle !== activeArticleId) {\n            var allTitles = document.querySelectorAll('.blog__navigation-item');\n            allTitles.forEach(function (title) {\n                title.classList.remove('blog__navigation-item--active');\n            });\n            document.getElementById(artcl.dataset.idtitle).classList.add('blog__navigation-item--active');\n            activeArticleId = artcl.dataset.idtitle;\n        }\n    }\n\n    if (window.pageYOffset < getCoords(articles[0]).top) {\n        setActive(articles[0]);\n    } else if (window.pageYOffset + window.innerHeight === document.body.offsetHeight) {\n        setActive(articles[articles.length - 1]);\n    } else {\n        articles.forEach(function (article) {\n            var elemTop = getCoords(article).top;\n            if (window.pageYOffset > elemTop - 150) {\n                setActive(article);\n            }\n        });\n    }\n}\n\nfunction setArticleChords() {\n    var elemChords = getCoords(articles[0]);\n    if (window.pageYOffset >= elemChords.top - 30) {\n\n        articlesList.style.position = 'fixed';\n        articlesList.style.top = '30px';\n    } else {\n        articlesList.style.position = 'static';\n    }\n}\n\nif (articlesList && articles.length) {\n    articlesList.style.width = articlesList.offsetWidth + 'px';\n\n    window.onscroll = function () {\n        setArticleChords();\n        setArticleActive();\n    };\n\n    setArticleChords();\n    setArticleActive();\n}\n\n//# sourceURL=webpack:///./src/lib/blog.js?");
 
 /***/ }),
 
@@ -108,13 +120,13 @@ eval("var _typeof=typeof Symbol===\"function\"&&typeof Symbol.iterator===\"symbo
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************!*\
-  !*** multi ./src/lib/blog.js ./src/lib/controls.js ./src/lib/water.js ***!
-  \************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** multi ./src/lib/about.js ./src/lib/blog.js ./src/lib/controls.js ./src/lib/water.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\blog.js */\"./src/lib/blog.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\controls.js */\"./src/lib/controls.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/blog.js_./src/lib/controls.js_./src/lib/water.js?");
+eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\about.js */\"./src/lib/about.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\blog.js */\"./src/lib/blog.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\controls.js */\"./src/lib/controls.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/about.js_./src/lib/blog.js_./src/lib/controls.js_./src/lib/water.js?");
 
 /***/ })
 

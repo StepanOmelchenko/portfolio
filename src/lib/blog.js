@@ -42,8 +42,6 @@
 
     function setArticleChords() {
         const elemChords = getCoords(articles[0]);
-        /* console.log('elem', elemChords.top);
-        console.log('win', window.pageYOffset); */
         if (window.pageYOffset >= elemChords.top - 30) {
 
             articlesList.style.position = 'fixed';

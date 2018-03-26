@@ -14,21 +14,9 @@
         display: block;
         position: absolute;
         left: 0;
-        bottom: 98%;
+        top: 0;
         right: 0;
-        width: 100%;
-
-        @include desktops{
-            bottom: 99%;
-        }
-
-        @include horizontal{
-            bottom: 99.5%;
-        }
-
-        @include phones{
-            bottom: 99.7%;
-        }
+        transform: translateY(-95%);
     }
 
     &__content{
