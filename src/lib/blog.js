@@ -2,6 +2,8 @@
     const articlesList = document.querySelector('.blog__navigation');
     const articleTitles = document.querySelectorAll('.blog__navigation-item');
     let activeArticleId = null;
+    let isBeingAnimated = false;
+
 
     function getCoords(elem) {
         const box = elem.getBoundingClientRect();
@@ -63,3 +65,44 @@
         setArticleActive();
 
     }
+
+    articleTitles.forEach((title, index) => {
+        const link = title.querySelector('.blog__navigation-link');
+
+        link.onclick = (e) => {
+            e.preventDefault();
+            if (!isBeingAnimated && articles) {
+                isBeingAnimated = true;
+                const currentPosition = window.pageYOffset;
+                const targetPosition = articles[index].getBoundingClientRect().top + currentPosition;
+                const scrollAnimationDuration = 1000;
+                animateScroll(currentPosition, targetPosition, scrollAnimationDuration).then((resolve) => {
+                    isBeingAnimated = false;
+                });
+            }
+            
+        };
+    });
+
+    function animateScroll(from, to, duration) {
+        return new Promise(function(resolve) {
+          
+          function animate() {
+            const currentTime = Date.now();
+            const timesLeft = startTime + duration - currentTime;
+            
+            if (timesLeft <= 0) {
+              scroll(0, to);
+              resolve();
+            } else {
+              const progress = 1/duration * (duration - timesLeft);
+              const nextPoint = from + (to - from) * progress;
+              scroll(0, nextPoint);
+              requestAnimationFrame(animate);
+            }
+          }
+          
+          const startTime = Date.now();
+          requestAnimationFrame(animate);
+        });
+      }
