@@ -59,12 +59,12 @@
                   <form class="login" id="login" method="POST" action="main.php">
                     <h2 class="login__header">Авторизуйтесь</h2>
                     <label class="login__label" for="login">
-                      <input class="login__input" type="text" name="login" placeholder="Имя">
+                      <input class="login__input" type="text" name="login" placeholder="Имя" required>
                     </label>
                     <label class="login__label" for="pass">
-                      <input class="login__input" type="text" name="pass" placeholder="Пароль">
+                      <input class="login__input" type="text" name="pass" placeholder="Пароль" required>
                     </label>
-                    <label class="login__label login__label--checkbox">
+                    <label class="login__checkbox">
                       <input class="login__check" type="checkbox" name="check"><span class="login__check-img"></span><span class="login__check-span">Я человек</span>
                     </label>
                     <p class="login__text">Вы точно не робот?</p>
@@ -77,7 +77,7 @@
                       </label>
                     </div>
                     <div class="login__controls">
-                      <label class="login__back-label"><span class="login__back-span">На главную</span>
+                      <label class="login__back-label"><span class="login__back-span" id="login-return">На главную</span>
                         <input class="login__back" type="button">
                       </label>
                       <label class="login__submit-label"> <span class="login__submit-span">Войти</span>

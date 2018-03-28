@@ -2,6 +2,7 @@ window.onload = function() {
     const hamburger = document.querySelector('.hamburger');
     const authorizationBtn = document.querySelector('#autr-btn');
     const flipper = document.querySelector('#flipper');
+    const loginReturn = document.querySelector('#login-return');
 
     if (hamburger) {
         hamburger.addEventListener('click', (e) => {
@@ -20,6 +21,15 @@ window.onload = function() {
                 if (flipper.classList.contains('welcome__flipper--active')) {
                     flipper.classList.remove('welcome__flipper--active');
                 }
+            }
+        });
+    }
+
+    if (loginReturn) {
+        loginReturn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (flipper.classList.contains('welcome__flipper--active')) {
+                flipper.classList.remove('welcome__flipper--active');
             }
         });
     }

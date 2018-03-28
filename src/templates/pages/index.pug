@@ -31,10 +31,10 @@ block content
                                 form.login(id="login" method="POST" action="main.php")
                                     h2.login__header Авторизуйтесь
                                     label.login__label(for="login")
-                                        input.login__input(type="text" name="login" placeholder="Имя")
+                                        input.login__input(type="text" name="login" placeholder="Имя" required)
                                     label.login__label(for="pass")
-                                        input.login__input(type="text" name="pass" placeholder="Пароль")
-                                    label.login__label.login__label--checkbox
+                                        input.login__input(type="text" name="pass" placeholder="Пароль" required)
+                                    label.login__checkbox
                                         input.login__check(type="checkbox" name="check")
                                         span.login__check-img
                                         span.login__check-span Я человек
@@ -50,7 +50,7 @@ block content
                                             span.login__radio-span Не уверен 
                                     .login__controls
                                         label.login__back-label
-                                            span.login__back-span На главную
+                                            span.login__back-span(id="login-return") На главную
                                             input.login__back(type="button")
                                         label.login__submit-label 
                                             span.login__submit-span Войти

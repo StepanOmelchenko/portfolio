@@ -68,10 +68,10 @@ block content
                     .form__inner
                         h2.form__header Связаться со мной
                         label.form__label(for="name")
-                            input.form__input(type="text" name="name" placeholder="Имя")
+                            input.form__input(type="text" name="name" placeholder="Имя" required)
                         label.form__label(for="email")
-                            input.form__input(type="text" name="email" placeholder="Email")
-                        textarea.form__textarea(name="text", cols="30", rows="10" placeholder="Ваше сообщение")
+                            input.form__input(type="text" name="email" placeholder="Email" required)
+                        textarea.form__textarea(name="text", cols="30", rows="10" placeholder="Ваше сообщение" required)
                         .form__controls
                             label.form__submit-label
                                 span.form__submit-span Отправить
