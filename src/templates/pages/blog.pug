@@ -13,16 +13,17 @@ block content
                     include ../common/traingle.pug                
                     +traingle("traingles--blog")
                 aside.blog__sidebar
-                    nav.blog__navigation
-                        ul.blog__navigation-list
-                            li(id="0").blog__navigation-item.blog__navigation-item--active
-                                a.blog__navigation-link(href="#") Самое важное в SASS
-                            li(id="1").blog__navigation-item
-                                a.blog__navigation-link(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
-                            li(id="2").blog__navigation-item
-                                a.blog__navigation-link(href="#") Самый необходимый набор Gulp плагинов
-                            li(id="3").blog__navigation-item
-                                a.blog__navigation-link(href="#") Почему я выбрал Jade
+                    .blog__navigation-wrapper
+                        nav.blog__navigation
+                            ul.blog__navigation-list
+                                li(id="0").blog__navigation-item.blog__navigation-item--active
+                                    a.blog__navigation-link(href="#") Самое важное в SASS
+                                li(id="1").blog__navigation-item
+                                    a.blog__navigation-link(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
+                                li(id="2").blog__navigation-item
+                                    a.blog__navigation-link(href="#") Самый необходимый набор Gulp плагинов
+                                li(id="3").blog__navigation-item
+                                    a.blog__navigation-link(href="#") Почему я выбрал Jade
                 .blog__content
                     ul.blog__content-list
                         li(data-idtitle="0").blog__content-item

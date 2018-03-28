@@ -60,6 +60,10 @@
             setArticleChords();
             setArticleActive();
         };
+
+        window.onresize = () => {
+            articlesList.style.width = articlesList.parentNode.offsetWidth + 'px';
+        };
         
         setArticleChords();
         setArticleActive();
