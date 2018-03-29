@@ -14,18 +14,14 @@ class CreateOverlay {
     }
     
     createItem(obj) {
-        this.item = document.createElement('li');
-        this.item.classList.add('overlay__item');
-        this.link = document.createElement('a');
-        this.link.classList.add('overlay__link');
-        this.link.innerText = obj.title;
-        this.link.setAttribute('href', obj.href);
-        /* this.link.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.overlay.classList.remove('overlay--active');
-            }); */
-        this.item.appendChild(this.link);
-        return this.item;
+        let item = document.createElement('li');
+        item.classList.add('overlay__item');
+        let link = document.createElement('a');
+        link.classList.add('overlay__link');
+        link.innerText = obj.title;
+        link.setAttribute('href', obj.href);
+        item.appendChild(link);
+        return item;
     }
 }
 

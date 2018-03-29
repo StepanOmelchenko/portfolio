@@ -325,6 +325,7 @@
     &__diagrams-item{
         position: relative;
         margin-right: 20px;
+        width: min-content;
 
         @include desktops-low{
             margin-right: 10px;
@@ -337,6 +338,11 @@
         &:last-child{
             margin-right: 0;
         }
+    }
+
+    &__diagrams-svg{
+        width: 110px;
+        height: 110px;
     }
 
     &__diagrams-title{
