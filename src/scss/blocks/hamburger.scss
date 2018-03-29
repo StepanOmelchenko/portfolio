@@ -23,7 +23,7 @@
         border-radius: 5px;
         opacity: 1;
         transition: background-color .2s;
-        transition-delay: .3s;
+        transition-delay: .1s;
 
         &:before,
         &:after{
@@ -50,6 +50,9 @@
     }
 
     &--active{
+        z-index: 9999;
+        position: sticky;
+
         .hamburger__pipe{
             
             background-color: transparent;

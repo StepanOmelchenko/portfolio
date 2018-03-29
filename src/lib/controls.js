@@ -7,7 +7,12 @@ window.onload = function() {
     if (hamburger) {
         hamburger.addEventListener('click', (e) => {
             e.preventDefault();
-            hamburger.classList.toggle('hamburger--active');
+            let overlay = document.querySelector('.overlay');
+            if(overlay) {
+                hamburger.classList.toggle('hamburger--active');
+                overlay.classList.toggle('overlay--active');
+            }
+            
         });
     }
     
