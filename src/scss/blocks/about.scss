@@ -354,6 +354,10 @@
         font-size: 14px;
     }
 
+    &__diagrams-circle{
+        transition: 1s;
+    }
+
     &__map{
         height: 120vh;
         display: flex;

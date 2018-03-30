@@ -1,5 +1,6 @@
 
     const diagrams = document.querySelector('#diagrams-list');
+    var isBeingWached = false;
 
     //console.log(diagrams);
 
@@ -9,8 +10,16 @@
             let win = window.pageYOffset;
 
 
-            if (target < win) {
-                console.log('diagrams here');
+            if (target < win && !isBeingWached) {
+                isBeingWached = true;
+                //console.log('diagrams here');
+                let allCircles = diagrams.querySelectorAll('.about__diagrams-circle');
+
+                allCircles.forEach((circle) => {
+                    const val = circle.dataset.fillClass;
+                    //console.log(val);
+                    circle.classList.add(val);
+                });
             }
         };
     }

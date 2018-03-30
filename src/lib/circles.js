@@ -4,16 +4,16 @@ class Circle {
         this.svg = document.createElementNS(this.svgns, 'svg');
         this.height = data.size;
         this.width = data.size;
-        this.radius = data.size / 3;
+        this.radius = data.radius;
         this.percent = data.percent;
         this.strokeDasharray = 2 * Math.PI * this.radius;
         this.svg.setAttribute('width', this.width);
         this.svg.setAttribute('height', this.height);
         this.svg.setAttribute('viewBox', `0 0 ${this.width} ${this.height}`);
         this.svg.classList.add('about__diagrams-svg');
-        this.baseCircle = this.createCircle('#dfdcd5', true);
-        this.bgCircle = this.createCircle('#6c9c5a');
-        this.bgCircle.setAttribute('data-fill-class', this.percent);
+        this.baseCircle = this.createCircle('#6c9c5a', true);
+        this.baseCircle.setAttribute('data-fill-class', this.percent);
+        this.bgCircle = this.createCircle('#dfdcd5');
         this.svg.appendChild(this.bgCircle);
         this.svg.appendChild(this.baseCircle);
       
@@ -34,6 +34,7 @@ class Circle {
             circle.setAttribute('transform', `rotate(-90 ${cx} ${cy})`);
             circle.setAttribute('stroke-dasharray', this.strokeDasharray);
             circle.setAttribute('stroke-dashoffset', this.strokeDasharray);
+            circle.classList.add('about__diagrams-circle');
         }
         return circle;
     }
@@ -80,27 +81,101 @@ class ScillList {
 }
 
 const diagramsContainer = document.querySelector('#diagrams-list');
-const circlesData = {
-                    header: 'test',
-                    circles: [
-                        {
-                            title: 'circle1',
-                            data: {
-                                size: 110,
-                                percent: 'class-90'
-                            }
-                        },
-                        {
-                            title: 'circle2',
-                            data: {
-                                size: 110,
-                                percent: 'class-70'
-                            }
-                        }
-                    ]
-                    };
+const circlesData = [
+    {
+        header: 'Frontend',
+        circles: [
+            {
+                title: 'HTML',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--70'
+                }
+            },
+            {
+                title: 'CSS',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--70'
+                }
+            },
+            {
+                title: 'Javascript',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--70'
+                }
+            }
+        ]
+    },
+    {
+        header: 'Backend',
+        circles: [
+            {
+                title: 'PHP',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--10'
+                }
+            },
+            {
+                title: 'mySQL',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--10'
+                }
+            },
+            {
+                title: 'Node.js',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--10'
+                }
+            }
+        ]
+    },
+    {
+        header: 'WorkFlow',
+        circles: [
+            {
+                title: 'Git',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--50'
+                }
+            },
+            {
+                title: 'Gulp',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--30'
+                }
+            },
+            {
+                title: 'Bower',
+                data: {
+                    size: 110,
+                    radius: 45,
+                    percent: 'circle--10'
+                }
+            }
+        ]
+    }
+];
 
 if (diagramsContainer) {
     /* console.log('hello from diagrams'); */
-    diagramsContainer.appendChild(new ScillList(circlesData));
+    diagramsContainer.innerHTML = null;
+    circlesData.forEach((row) => {
+        diagramsContainer.appendChild(new ScillList(row));
+    });
+    
 }
