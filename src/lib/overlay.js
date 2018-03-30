@@ -44,6 +44,4 @@ const overlayMenu = [
     }
 ];
 
-if (hamburger) {
-    document.querySelector('body').appendChild(new CreateOverlay(overlayMenu));
-}
+document.querySelector('body').appendChild(new CreateOverlay(overlayMenu));
