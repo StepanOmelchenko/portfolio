@@ -21,6 +21,10 @@
 
     &__item{
         margin-bottom: 80px;
+
+        @include phones{
+            margin-bottom: 50px;
+        }
     }
 
     &__link{
@@ -42,10 +46,23 @@
             background-color: $white;
             opacity: 0;
             transition: opacity .2s;
+
+            @include phones{
+                width: 58px;
+                bottom: -18px;
+            }
         }
 
         &:hover:after{
             opacity: 1;            
+        }
+
+        @include tablets{
+            font-size: 49px;
+        }
+
+        @include phones{
+            font-size: 35px;
         }
     }
 }
