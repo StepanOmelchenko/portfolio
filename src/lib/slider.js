@@ -147,10 +147,12 @@ function animateSlider(elem, currentPosition, targetPosition, duration) {
 }
   
 function setCurrentPicture(index) {
+    //current.style.opacity = .5;
     current.style.backgroundImage = `url(${data[index].img})`;
     sliderTitle.innerText = data[index].title;
     sliderTech.innerText = data[index].tech;
     sliderLink.setAttribute('href', data[index].link);
+    //current.style.opacity = 1;
 }
   
 function sliderMoveUp(upList, downList, direction) {

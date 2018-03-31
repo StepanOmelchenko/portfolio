@@ -141,6 +141,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 1;
+        transition: .3s;
 
         @include horizontal{
             order: -1;
