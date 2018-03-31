@@ -21,31 +21,33 @@ class CreateList {
 const data = [
     {
         title: 'site1',
-        img: 'https://api.icons8.com/download/86bf59698882ab1aa548517cab3908a699136acb/Color/PNG/512/Very_Basic/cancel-512.png'
+        img: 'https://api.icons8.com/download/86bf59698882ab1aa548517cab3908a699136acb/Color/PNG/512/Very_Basic/cancel-512.png',
+        tech: 'HTML , CSS, JAVASCRIPT',
+        link: 'https://stepanomelchenko.github.io/'
     },
     {
         title: 'site2',
-        img: 'https://www.clubsports.com/sites/default/files/styles/large_retina/public/CIRCLE-1600x1200-kids-clubsport-swim-2.jpg?itok=2ZhZU2AH'
+        img: 'http://www.powerretail.com.au/wp-content/uploads/2013/04/sofia-logo.png',
+        tech: 'HTML',
+        link: 'https://stepanomelchenko.github.io/'
     },
     {
         title: 'site3',
-        img: 'http://www.powerretail.com.au/wp-content/uploads/2013/04/sofia-logo.png'
+        img: 'img/slider/1.png',
+        tech: 'HTML , CSS',
+        link: 'https://stepanomelchenko.github.io/'
     },
     {
         title: 'site4',
-        img: 'img/slider/1.png'
+        img: 'img/slider/2.png',
+        tech: 'JAVASCRIPT',
+        link: 'https://stepanomelchenko.github.io/'
     },
     {
-        title: 'site4',
-        img: 'img/slider/2.png'
-    },
-    {
-        title: 'site4',
-        img: 'img/slider/3.png'
-    },
-    {
-        title: 'site4',
-        img: 'https://www.netsurion.com/Corporate/media/Corporate/Images/Blog/Thumbnails/target-bullseye-thumb.jpg?ext=.jpg'
+        title: 'site5',
+        img: 'img/slider/3.png',
+        tech: 'HTML , CSS, JAVASCRIPT',
+        link: 'https://stepanomelchenko.github.io/'
     }
 ];
 
@@ -60,6 +62,10 @@ const duration = 1000;
 const leftSlider = new CreateList(data);
 const rightSlider = new CreateList(data);
 let listLeft, listRight;
+var isBeingAnimated = false;
+var sliderTitle = document.querySelector('#slider-title');
+var sliderTech = document.querySelector('#slider-tech');
+var sliderLink = document.querySelector('#slider-link');
 
 var currentIndex = {
     index: 1,
@@ -98,14 +104,13 @@ var currentIndex = {
         return result;
     }
 };
-  //var isAnimated = false;
   
 leftBtn.appendChild(leftSlider.list);
 rightBtn.appendChild(rightSlider.list);
 listLeft = leftBtn.querySelectorAll('.slider__link-item');
 listRight = rightBtn.querySelectorAll('.slider__link-item');
   
-current.style.backgroundImage = `url(${data[currentIndex.get()].img})`;
+setCurrentPicture(currentIndex.get());
 animateSlider(listLeft[2], 0 , 100, duration);
 animateSlider(listRight[0], 0 , 100, duration);
   
@@ -143,10 +148,13 @@ function animateSlider(elem, currentPosition, targetPosition, duration) {
   
 function setCurrentPicture(index) {
     current.style.backgroundImage = `url(${data[index].img})`;
+    sliderTitle.innerText = data[index].title;
+    sliderTech.innerText = data[index].tech;
+    sliderLink.setAttribute('href', data[index].link);
 }
   
 function sliderMoveUp(upList, downList, direction) {
-    //console.log(direction);
+    isBeingAnimated = true;
     let beforeElemCounter = currentIndex.get();
     let currentElemCounter;
     let nextElemCounter;
@@ -164,7 +172,9 @@ function sliderMoveUp(upList, downList, direction) {
     animateSlider(upList[currentElemCounter], 100 , 0, duration);
     animateSlider(upList[nextElemCounter], 200 , 100, duration);
     animateSlider(downList[nextElemCounter2], 100 , 200, duration);
-    animateSlider(downList[beforeElemCounter], 0 , 100, duration);
+    animateSlider(downList[beforeElemCounter], 0 , 100, duration).then(() => {
+        isBeingAnimated = false;
+    });
     setCurrentPicture(currentElemCounter);  
 }
 
