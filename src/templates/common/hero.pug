@@ -16,6 +16,6 @@ mixin hero(heroArrowType, headerType)
                 include info
                 +info(headerType)
             div(class=`${heroArrowType}`)
-                a.hero__next-link(href="#")
+                a.hero__next-link(href="#" id="btn-movedown")
                     svg.hero__next-svg(width="26" height="16")
                         use(xlink:href="img/sprites/sprite.svg#arrow_down")
