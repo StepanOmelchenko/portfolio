@@ -6,7 +6,7 @@ class Circle {
         this.width = data.size;
         this.radius = data.radius;
         this.percent = data.percent;
-        this.strokeDasharray = 2 * Math.PI * this.radius;
+        this.strokeDasharray = `.001 ${2 * Math.PI * this.radius}`;
         this.svg.setAttribute('width', this.width);
         this.svg.setAttribute('height', this.height);
         this.svg.setAttribute('viewBox', `0 0 ${this.width} ${this.height}`);
@@ -33,7 +33,7 @@ class Circle {
         if (isBase) {
             circle.setAttribute('transform', `rotate(-90 ${cx} ${cy})`);
             circle.setAttribute('stroke-dasharray', this.strokeDasharray);
-            circle.setAttribute('stroke-dashoffset', this.strokeDasharray);
+            //circle.setAttribute('stroke-dashoffset', this.strokeDasharray);
             circle.classList.add('about__diagrams-circle');
         }
         return circle;
