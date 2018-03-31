@@ -143,6 +143,18 @@ eval("\n\nvar _createClass = function () { function defineProperties(target, pro
 
 /***/ }),
 
+/***/ "./src/lib/preloader.js":
+/*!******************************!*\
+  !*** ./src/lib/preloader.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar preloader = document.querySelector('#preloader');\n//const preloaderPercent = document.querySelector('#preloader-percent');\n\n//preloaderPercent.innerText = 'Pawel';\n\ndocument.body.onload = function () {\n    preloader.classList.add('preloader--hide');\n};\n\n//# sourceURL=webpack:///./src/lib/preloader.js?");
+
+/***/ }),
+
 /***/ "./src/lib/slider.js":
 /*!***************************!*\
   !*** ./src/lib/slider.js ***!
@@ -168,13 +180,13 @@ eval("var _typeof=typeof Symbol===\"function\"&&typeof Symbol.iterator===\"symbo
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************!*\
-  !*** multi ./src/lib/about.js ./src/lib/blog.js ./src/lib/circles.js ./src/lib/controls.js ./src/lib/functions.js ./src/lib/overlay.js ./src/lib/slider.js ./src/lib/water.js ***!
-  \********************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/lib/about.js ./src/lib/blog.js ./src/lib/circles.js ./src/lib/controls.js ./src/lib/functions.js ./src/lib/overlay.js ./src/lib/preloader.js ./src/lib/slider.js ./src/lib/water.js ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\about.js */\"./src/lib/about.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\blog.js */\"./src/lib/blog.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\circles.js */\"./src/lib/circles.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\controls.js */\"./src/lib/controls.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\functions.js */\"./src/lib/functions.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\overlay.js */\"./src/lib/overlay.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\slider.js */\"./src/lib/slider.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/about.js_./src/lib/blog.js_./src/lib/circles.js_./src/lib/controls.js_./src/lib/functions.js_./src/lib/overlay.js_./src/lib/slider.js_./src/lib/water.js?");
+eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\about.js */\"./src/lib/about.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\blog.js */\"./src/lib/blog.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\circles.js */\"./src/lib/circles.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\controls.js */\"./src/lib/controls.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\functions.js */\"./src/lib/functions.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\overlay.js */\"./src/lib/overlay.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\preloader.js */\"./src/lib/preloader.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\slider.js */\"./src/lib/slider.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/about.js_./src/lib/blog.js_./src/lib/circles.js_./src/lib/controls.js_./src/lib/functions.js_./src/lib/overlay.js_./src/lib/preloader.js_./src/lib/slider.js_./src/lib/water.js?");
 
 /***/ })
 
