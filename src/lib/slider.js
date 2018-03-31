@@ -49,6 +49,10 @@ const data = [
     }
 ];
 
+const slider = document.querySelector('#slider');
+
+if (slider) {
+
 const current = document.querySelector('#slider-current');
 const leftBtn = document.querySelector('#slider-left');
 const rightBtn = document.querySelector('#slider-right');
@@ -162,4 +166,6 @@ function sliderMoveUp(upList, downList, direction) {
     animateSlider(downList[nextElemCounter2], 100 , 200, duration);
     animateSlider(downList[beforeElemCounter], 0 , 100, duration);
     setCurrentPicture(currentElemCounter);  
+}
+
 }
