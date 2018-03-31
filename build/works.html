@@ -84,14 +84,16 @@
             </div>
           </li>
           <li class="slider__item slider__current">
-            <div class="slider__current-box" style="background-image: url('img/slider/3.png')"><img class="slider__img" src="img/slider/3.png" alt="my project" hidden></div>
+            <div class="slider__current-box" id="slider-current">
+              <!--img.slider__img(src="img/slider/3.png" alt="my project" hidden)-->
+            </div>
           </li>
-          <li class="slider__item slider__controls"><a class="slider__down" href="#" style="background-image: url('img/slider/1.png')">
+          <li class="slider__item slider__controls"><a class="slider__link slider__down" href="#" id="slider-left">
               <div class="slider__down-btn">
                 <svg class="slider__down-svg" width="43" height="27">
                   <use xlink:href="img/sprites/sprite.svg#portf_arrow_down"></use>
                 </svg>
-              </div></a><a class="slider__up" href="#" style="background-image: url('img/slider/2.png')">
+              </div></a><a class="slider__link slider__up" href="#" id="slider-right">
               <div class="slider__up-btn">
                 <svg class="slider__up-svg" width="43" height="27">
                   <use xlink:href="img/sprites/sprite.svg#portf_arrow_up"></use>

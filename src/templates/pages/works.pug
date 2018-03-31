@@ -27,14 +27,14 @@ block content
                                 use(xlink:href="img/sprites/sprite.svg#link")
                             span.slider__title-span Посмотреть сайт
                 li.slider__item.slider__current
-                    .slider__current-box(style="background-image: url('img/slider/3.png')")
-                        img.slider__img(src="img/slider/3.png" alt="my project" hidden)
+                    .slider__current-box(id="slider-current")
+                        //img.slider__img(src="img/slider/3.png" alt="my project" hidden)
                 li.slider__item.slider__controls
-                    a.slider__down(href="#" style="background-image: url('img/slider/1.png')")
+                    a.slider__link.slider__down(href="#" id="slider-left")
                         .slider__down-btn
                             svg.slider__down-svg(width="43" height="27")
                                 use(xlink:href="img/sprites/sprite.svg#portf_arrow_down")
-                    a.slider__up(href="#" style="background-image: url('img/slider/2.png')")
+                    a.slider__link.slider__up(href="#" id="slider-right")
                         .slider__up-btn
                             svg.slider__up-svg(width="43" height="27")
                                 use(xlink:href="img/sprites/sprite.svg#portf_arrow_up")
