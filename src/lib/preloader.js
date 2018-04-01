@@ -1,4 +1,8 @@
-const preloader = (function () {
+/* const preloader = (function () { */
+    const preloader = document.querySelector('#preloader');
+
+    if (preloader) {
+        
     let precentTotal = 0;
     let preloader = document.querySelector('#preloader');
     let preloderTitle = document.querySelector('#preloader-title');
@@ -48,5 +52,7 @@ const preloader = (function () {
             preloader.classList.add('preloader--hide');
         }
     }
+
+    }
         
-})();
+/* })(); */

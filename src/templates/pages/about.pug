@@ -80,7 +80,7 @@ block content
                                         svg.about__diagrams-svg(width="110" height="110")
                                             use(xlink:href="#diagram-circle")
                                         span.about__diagrams-title Bower
-        section.section.about__map
+        section.section.about__map(id="map")
             .about__map-box
                 h2.about__map-header Контакты
                 ul.about__map-list
@@ -104,3 +104,4 @@ block content
             include ../common/footer
         include ../common/pantry-socials.pug
         include ../common/pantry-circles.pug
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

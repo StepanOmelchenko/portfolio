@@ -131,6 +131,18 @@ eval("\n\nfunction animateScroll(from, to, duration) {\n  return new Promise(fun
 
 /***/ }),
 
+/***/ "./src/lib/map.js":
+/*!************************!*\
+  !*** ./src/lib/map.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar map = document.querySelector('#map');\n\nif (map) {\n  var init = function init() {\n    myMap = new ymaps.Map(\"map\", {\n      center: [59.941392, 30.293756],\n      zoom: 12,\n      controls: ['zoomControl']\n    });\n    myMap.behaviors.disable('scrollZoom');\n\n    var placemarks = createPlacemarks(coords);\n\n    placemarks.forEach(function (placemark) {\n      myMap.geoObjects.add(placemark);\n    });\n\n    function createPlacemarks(array) {\n      var placemarks = [];\n\n      array.forEach(function (coord) {\n        var oneMark = new ymaps.Placemark([coord[0], coord[1]], {}, {\n          iconLayout: 'default#image',\n          iconImageSize: [46, 57],\n          iconImageOffset: [0, 0]\n        });\n        placemarks.push(oneMark);\n      });\n\n      return placemarks;\n    }\n  };\n\n  ymaps.ready(init);\n  var myMap;\n  var coords = [[59.961368, 30.288778]];\n}\n\n//# sourceURL=webpack:///./src/lib/map.js?");
+
+/***/ }),
+
 /***/ "./src/lib/overlay.js":
 /*!****************************!*\
   !*** ./src/lib/overlay.js ***!
@@ -151,7 +163,7 @@ eval("\n\nvar _createClass = function () { function defineProperties(target, pro
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar preloader = function () {\n    var precentTotal = 0;\n    var preloader = document.querySelector('#preloader');\n    var preloderTitle = document.querySelector('#preloader-title');\n    var paths = [];\n    var imgs = document.querySelectorAll('img').forEach(function (img) {\n        paths.push(img.src);\n    });\n    var backGrounds = document.querySelectorAll('*').forEach(function (elem) {\n        var bg = getComputedStyle(elem).getPropertyValue('background-image');\n        if (bg && bg !== 'none') {\n            paths.push(bg.replace('url(\"', '').replace('\")', ''));\n        }\n    });\n    if (paths.length) {\n        paths.forEach(function (path) {\n            imgLoader(path).then(function () {\n                precentTotal++;\n                setPercent(paths.length, precentTotal);\n            });\n        });\n    } else {\n        preloader.classList.add('preloader--hide');\n    }\n\n    function imgLoader(path) {\n        return new Promise(function (resolve) {\n            var fakeImg = document.createElement('img');\n            fakeImg.src = path;\n\n            fakeImg.addEventListener('load', function () {\n                resolve();\n            });\n            fakeImg.addEventListener('error', function () {\n                resolve();\n            });\n        });\n    }\n\n    function setPercent(total, current) {\n        var percents = Math.ceil(current / total * 100);\n\n        preloderTitle.innerText = percents + '%';\n\n        if (percents >= 100) {\n            preloader.classList.add('preloader--hide');\n        }\n    }\n}();\n\n//# sourceURL=webpack:///./src/lib/preloader.js?");
+eval("\n\n/* const preloader = (function () { */\nvar preloader = document.querySelector('#preloader');\n\nif (preloader) {\n    var imgLoader = function imgLoader(path) {\n        return new Promise(function (resolve) {\n            var fakeImg = document.createElement('img');\n            fakeImg.src = path;\n\n            fakeImg.addEventListener('load', function () {\n                resolve();\n            });\n            fakeImg.addEventListener('error', function () {\n                resolve();\n            });\n        });\n    };\n\n    var setPercent = function setPercent(total, current) {\n        var percents = Math.ceil(current / total * 100);\n\n        preloderTitle.innerText = percents + '%';\n\n        if (percents >= 100) {\n            _preloader.classList.add('preloader--hide');\n        }\n    };\n\n    var precentTotal = 0;\n    var _preloader = document.querySelector('#preloader');\n    var preloderTitle = document.querySelector('#preloader-title');\n    var paths = [];\n    var imgs = document.querySelectorAll('img').forEach(function (img) {\n        paths.push(img.src);\n    });\n    var backGrounds = document.querySelectorAll('*').forEach(function (elem) {\n        var bg = getComputedStyle(elem).getPropertyValue('background-image');\n        if (bg && bg !== 'none') {\n            paths.push(bg.replace('url(\"', '').replace('\")', ''));\n        }\n    });\n    if (paths.length) {\n        paths.forEach(function (path) {\n            imgLoader(path).then(function () {\n                precentTotal++;\n                setPercent(paths.length, precentTotal);\n            });\n        });\n    } else {\n        _preloader.classList.add('preloader--hide');\n    }\n}\n\n/* })(); */\n\n//# sourceURL=webpack:///./src/lib/preloader.js?");
 
 /***/ }),
 
@@ -180,13 +192,13 @@ eval("var _typeof=typeof Symbol===\"function\"&&typeof Symbol.iterator===\"symbo
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/lib/about.js ./src/lib/blog.js ./src/lib/circles.js ./src/lib/controls.js ./src/lib/functions.js ./src/lib/overlay.js ./src/lib/preloader.js ./src/lib/slider.js ./src/lib/water.js ***!
-  \*******************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/lib/about.js ./src/lib/blog.js ./src/lib/circles.js ./src/lib/controls.js ./src/lib/functions.js ./src/lib/map.js ./src/lib/overlay.js ./src/lib/preloader.js ./src/lib/slider.js ./src/lib/water.js ***!
+  \************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\about.js */\"./src/lib/about.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\blog.js */\"./src/lib/blog.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\circles.js */\"./src/lib/circles.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\controls.js */\"./src/lib/controls.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\functions.js */\"./src/lib/functions.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\overlay.js */\"./src/lib/overlay.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\preloader.js */\"./src/lib/preloader.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\slider.js */\"./src/lib/slider.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/about.js_./src/lib/blog.js_./src/lib/circles.js_./src/lib/controls.js_./src/lib/functions.js_./src/lib/overlay.js_./src/lib/preloader.js_./src/lib/slider.js_./src/lib/water.js?");
+eval("__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\about.js */\"./src/lib/about.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\blog.js */\"./src/lib/blog.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\circles.js */\"./src/lib/circles.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\controls.js */\"./src/lib/controls.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\functions.js */\"./src/lib/functions.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\map.js */\"./src/lib/map.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\overlay.js */\"./src/lib/overlay.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\preloader.js */\"./src/lib/preloader.js\");\n__webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\slider.js */\"./src/lib/slider.js\");\nmodule.exports = __webpack_require__(/*! D:\\projects\\loftschool\\portfolio\\src\\lib\\water.js */\"./src/lib/water.js\");\n\n\n//# sourceURL=webpack:///multi_./src/lib/about.js_./src/lib/blog.js_./src/lib/circles.js_./src/lib/controls.js_./src/lib/functions.js_./src/lib/map.js_./src/lib/overlay.js_./src/lib/preloader.js_./src/lib/slider.js_./src/lib/water.js?");
 
 /***/ })
 

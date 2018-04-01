@@ -367,7 +367,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-bottom: 10%;
 
         @include horizontal{
             padding-bottom: 240px;
@@ -378,9 +377,14 @@
         width: 380px;
         height: min-content;
         padding: 35px 40px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
         background-color: #f4f5f0;
         opacity: .8;
         overflow: hidden;
+        z-index: 10;
     }
 
     &__map-item{
