@@ -4,9 +4,9 @@
     top: 0;
     right: 0;
     bottom: 0;
-    /* background-image: url('../img/bg/forest_prel_bg.jpg');
+    background-image: url('../img/bg/forest_prel_bg.jpg');
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
     background-color: #6c9c5a;
     opacity: 1;
     z-index: 20;
@@ -23,9 +23,14 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        /* display: flex;
+        display: flex;
         flex-direction: column;
-        align-items: center; */
+        align-items: center;
+    }
+
+    &__title{
+        color: $white;
+        font-size: 24px;
     }
 
     &__svg{
@@ -34,5 +39,30 @@
 
     &__svg-path{
         stroke: $white;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: preloader-water;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    &__svg-path--second{
+        animation-delay: .5s;
+    }
+
+    &__svg-path--third{
+        animation-delay: .2s;
+    }
+}
+
+@keyframes preloader-water{
+    0% {
+        stroke-dashoffset: 500;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -500;
     }
 }
