@@ -136,13 +136,35 @@ function animateSlider(elem, currentPosition, targetPosition, duration) {
         const timesLeft = startTime + duration - currentTime;
         
         if (timesLeft <= 0) {
-        elem.style.transform = `translateY(${targetPosition}%)`;
-        resolve();
+            elem.style.transform = `translateY(${targetPosition}%)`;
+            resolve();
         } else {
-        const progress = 1/duration * (duration - timesLeft);
-        const step = currentPosition + (targetPosition - currentPosition) * progress;
-        elem.style.transform = `translateY(${step}%)`;
-        requestAnimationFrame(animate);
+            const progress = 1/duration * (duration - timesLeft);
+            const step = currentPosition + (targetPosition - currentPosition) * progress;
+            elem.style.transform = `translateY(${step}%)`;
+            requestAnimationFrame(animate);
+        }
+    }
+                    
+    const startTime = Date.now();
+    requestAnimationFrame(animate);                 
+    });
+}
+
+function animateOpacity(elem, duration) {
+    return new Promise((resolve) => {
+    function animate() {
+        const currentTime = Date.now();
+        const timesLeft = startTime + duration - currentTime;
+        
+        if (timesLeft <= 0) {
+            elem.style.opacity = 1;
+            resolve();
+        } else {
+            const progress = 1/duration * (duration - timesLeft);
+            const step = progress;
+            elem.style.opacity = step;
+            requestAnimationFrame(animate);
         }
     }
                     
@@ -152,11 +174,17 @@ function animateSlider(elem, currentPosition, targetPosition, duration) {
 }
   
 function setCurrentPicture(index) {
+    const duration = 1000;
     current.style.backgroundImage = `url(${data[index].img})`;
-    current.classList.add('slider__current-animation');
+    animateOpacity(current, duration).then(() => {
+        isBeingAnimated = false;
+    });
     sliderTitle.innerText = data[index].title;
     sliderTech.innerText = data[index].tech;
     sliderLink.setAttribute('href', data[index].link);
+    animateOpacity(sliderTitle, duration);
+    animateOpacity(sliderTech, duration);
+    //animateOpacity(sliderLink, duration);
 }
   
 function sliderMoveUp(upList, downList, direction) {
@@ -178,10 +206,7 @@ function sliderMoveUp(upList, downList, direction) {
     animateSlider(upList[currentElemCounter], 100 , 0, duration);
     animateSlider(upList[nextElemCounter], 200 , 100, duration);
     animateSlider(downList[nextElemCounter2], 100 , 200, duration);
-    animateSlider(downList[beforeElemCounter], 0 , 100, duration).then(() => {
-        isBeingAnimated = false;
-        current.classList.remove('slider__current-animation');
-    });
+    animateSlider(downList[beforeElemCounter], 0 , 100, duration);
     setCurrentPicture(currentElemCounter);  
 }
 

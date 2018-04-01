@@ -154,11 +154,6 @@
         }
     }
 
-    &__current-animation{
-        animation-name: slider-curent;
-        animation-duration: 1s;
-    }
-
     &__current-box{
         width: 90%;
         height: 90%;
@@ -251,14 +246,5 @@
         background-size: contain;
         background-repeat: no-repeat;
         will-change: transform;
-    }
-}
-
-@keyframes slider-curent{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
     }
 }
