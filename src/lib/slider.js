@@ -111,7 +111,6 @@ listLeft = leftBtn.querySelectorAll('.slider__link-item');
 listRight = rightBtn.querySelectorAll('.slider__link-item');
   
 setCurrentPicture(currentIndex.get());
-current.classList.remove('slider__current-animation'); // костыль
 animateSlider(listLeft[2], 0 , 100, duration);
 animateSlider(listRight[0], 0 , 100, duration);
   
@@ -184,7 +183,6 @@ function setCurrentPicture(index) {
     sliderLink.setAttribute('href', data[index].link);
     animateOpacity(sliderTitle, duration);
     animateOpacity(sliderTech, duration);
-    //animateOpacity(sliderLink, duration);
 }
   
 function sliderMoveUp(upList, downList, direction) {
