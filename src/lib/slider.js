@@ -111,17 +111,22 @@ listLeft = leftBtn.querySelectorAll('.slider__link-item');
 listRight = rightBtn.querySelectorAll('.slider__link-item');
   
 setCurrentPicture(currentIndex.get());
+current.classList.remove('slider__current-animation'); // костыль
 animateSlider(listLeft[2], 0 , 100, duration);
 animateSlider(listRight[0], 0 , 100, duration);
   
 leftBtn.onclick = (e) => {
     e.preventDefault();
-    sliderMoveUp(listLeft, listRight, 'left');
+    if (!isBeingAnimated) {
+        sliderMoveUp(listLeft, listRight, 'left');
+    }    
 };
   
 rightBtn.onclick = (e) => {
     e.preventDefault();
-    sliderMoveUp(listRight, listLeft, 'right');
+    if (!isBeingAnimated) {
+        sliderMoveUp(listRight, listLeft, 'right');
+    }    
 };
   
 function animateSlider(elem, currentPosition, targetPosition, duration) {
@@ -147,12 +152,11 @@ function animateSlider(elem, currentPosition, targetPosition, duration) {
 }
   
 function setCurrentPicture(index) {
-    //current.style.opacity = .5;
     current.style.backgroundImage = `url(${data[index].img})`;
+    current.classList.add('slider__current-animation');
     sliderTitle.innerText = data[index].title;
     sliderTech.innerText = data[index].tech;
     sliderLink.setAttribute('href', data[index].link);
-    //current.style.opacity = 1;
 }
   
 function sliderMoveUp(upList, downList, direction) {
@@ -176,6 +180,7 @@ function sliderMoveUp(upList, downList, direction) {
     animateSlider(downList[nextElemCounter2], 100 , 200, duration);
     animateSlider(downList[beforeElemCounter], 0 , 100, duration).then(() => {
         isBeingAnimated = false;
+        current.classList.remove('slider__current-animation');
     });
     setCurrentPicture(currentElemCounter);  
 }

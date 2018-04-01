@@ -143,7 +143,7 @@
         align-items: center;
         opacity: 1;
         transition: .3s;
-
+       
         @include horizontal{
             order: -1;
             flex-basis: 50%;
@@ -152,6 +152,11 @@
         @include phones{
             flex-basis: 45%;
         }
+    }
+
+    &__current-animation{
+        animation-name: slider-curent;
+        animation-duration: 1s;
     }
 
     &__current-box{
@@ -246,5 +251,14 @@
         background-size: contain;
         background-repeat: no-repeat;
         will-change: transform;
+    }
+}
+
+@keyframes slider-curent{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
