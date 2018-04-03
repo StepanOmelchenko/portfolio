@@ -1,4 +1,4 @@
-/* const preloader = (function () { */
+
     const preloader = document.querySelector('#preloader');
 
     if (preloader) {
@@ -55,4 +55,4 @@
 
     }
         
-/* })(); */
+

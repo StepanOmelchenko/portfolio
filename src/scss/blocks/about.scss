@@ -385,6 +385,16 @@
         opacity: .8;
         overflow: hidden;
         z-index: 10;
+
+        @include phones{
+            width: 80%;
+            padding: 5px;
+        }
+
+        @include min-height{
+            top: 10%;
+            transform: translate(-50%, -10%);
+        }
     }
 
     &__map-item{
