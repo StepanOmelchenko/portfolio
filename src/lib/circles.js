@@ -58,7 +58,6 @@ class Skill {
 
 class ScillList {
     constructor(data) {
-        /* console.log('hello from scillList'); */
         this.row = document.createElement('li');
         this.row.classList.add('about__diagrams-row');
         this.header = document.createElement('h3');
@@ -73,7 +72,6 @@ class ScillList {
 
         this.row.appendChild(this.header);
         this.row.appendChild(this.list);
-        /* console.log('row', this.row); */
         return this.row;
     }
 
@@ -123,7 +121,7 @@ const circlesData = [
                 }
             },
             {
-                title: 'mySQL',
+                title: 'Mongo.db',
                 data: {
                     size: 110,
                     radius: 45,
@@ -160,11 +158,11 @@ const circlesData = [
                 }
             },
             {
-                title: 'Bower',
+                title: 'Webpack',
                 data: {
                     size: 110,
                     radius: 45,
-                    percent: 'circle--10'
+                    percent: 'circle--30'
                 }
             }
         ]
@@ -172,7 +170,6 @@ const circlesData = [
 ];
 
 if (diagramsContainer) {
-    /* console.log('hello from diagrams'); */
     diagramsContainer.innerHTML = null;
     circlesData.forEach((row) => {
         diagramsContainer.appendChild(new ScillList(row));

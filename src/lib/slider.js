@@ -20,35 +20,35 @@ class CreateList {
   
 const data = [
     {
-        title: 'site1',
-        img: 'https://api.icons8.com/download/86bf59698882ab1aa548517cab3908a699136acb/Color/PNG/512/Very_Basic/cancel-512.png',
-        tech: 'HTML , CSS, JAVASCRIPT',
-        link: 'https://stepanomelchenko.github.io/'
+        title: 'Airplanet',
+        img: 'img/slider/airplanet.jpg',
+        tech: 'HTML, CSS, Gulp',
+        link: 'https://stepanomelchenko.github.io/airplanet/build'
     },
     {
-        title: 'site2',
-        img: 'http://www.powerretail.com.au/wp-content/uploads/2013/04/sofia-logo.png',
-        tech: 'HTML',
-        link: 'https://stepanomelchenko.github.io/'
+        title: 'Coworking',
+        img: 'img/slider/coworking.jpg',
+        tech: 'HTML, CSS, Gulp',
+        link: 'https://stepanomelchenko.github.io/coworking/build'
     },
     {
-        title: 'site3',
-        img: 'img/slider/1.png',
-        tech: 'HTML , CSS',
-        link: 'https://stepanomelchenko.github.io/'
+        title: 'Burger',
+        img: 'img/slider/burger.jpg',
+        tech: 'HTML, SCSS, Javascript, Gulp',
+        link: 'https://stepanomelchenko.github.io/burger/build'
     },
     {
-        title: 'site4',
-        img: 'img/slider/2.png',
-        tech: 'JAVASCRIPT',
-        link: 'https://stepanomelchenko.github.io/'
-    },
+        title: 'Portfolio',
+        img: 'img/slider/portfolio.jpg',
+        tech: 'Pug, SCSS, Javascript, Vue, Node.js, Gulp, Webpack',
+        link: 'https://stepanomelchenko.github.io/portfolio/build'
+    }/* ,
     {
         title: 'site5',
         img: 'img/slider/3.png',
         tech: 'HTML , CSS, JAVASCRIPT',
         link: 'https://stepanomelchenko.github.io/'
-    }
+    } */
 ];
 
 const slider = document.querySelector('#slider');

@@ -33,8 +33,10 @@ const paths = {
         dest: './build/fonts'
     },
     scripts: {
-        src: './src/lib/**/*.js',
-        dest: './build/lib'
+        src: './src/lib/*.js',
+        dest: './build/lib',
+        exLibSrc: "./src/lib/ex/*.js",
+        exLibDest: "./build/lib/ex"
     },
     svg: {
         src: './src/icons/**/*.svg',
@@ -113,6 +115,12 @@ function scripts() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function moveExLib() {
+    return gulp
+      .src(paths.scripts.exLibSrc)
+      .pipe(gulp.dest(paths.scripts.exLibDest));
+  }
+
 function spriteSvg() {
     return gulp.src(paths.svg.src)
         .pipe(svgmin({
@@ -141,6 +149,7 @@ function watch() {
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.fonts.src, fonts);
+    gulp.watch(paths.scripts.exLibSrc, moveExLib);
 }
 
 function server() {
@@ -157,11 +166,13 @@ exports.img = images;
 exports.delRoot = clear;
 exports.fonts = fonts
 exports.scripts = scripts;
+exports.moveExLib = moveExLib;
 exports.spriteSvg = spriteSvg;
 exports.watch = watch;
+exports.server = server;
 
 gulp.task('default', gulp.series(
     clear,
-    gulp.parallel(styles, templates, images, fonts, scripts, spriteSvg),
-    gulp.parallel(watch/* , server */)
+    gulp.parallel(styles, templates, images, fonts, scripts, spriteSvg, moveExLib),
+    gulp.parallel(watch, server)
 ));
