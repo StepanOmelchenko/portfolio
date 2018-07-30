@@ -76,7 +76,7 @@
         }
 
         @include min-height{
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         &:after{
@@ -92,6 +92,10 @@
 
             @include horizontal{
                 bottom: -15px;
+            }
+
+            @include min-height{
+                bottom: -20px;
             }
         }
     }
@@ -157,7 +161,7 @@
     &__current-box{
         width: 90%;
         height: 90%;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -243,7 +247,7 @@
         right: 0;
         bottom: 0;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         will-change: transform;
     }
