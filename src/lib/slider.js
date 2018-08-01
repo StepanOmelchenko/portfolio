@@ -21,19 +21,19 @@ class CreateList {
 const data = [
     {
         title: 'Airplanet',
-        img: 'img/slider/airplanet.jpg',
+        img: 'img/slider/airplanet1.jpg',
         tech: 'HTML, CSS, Gulp',
         link: 'https://stepanomelchenko.github.io/airplanet/build'
     },
     {
         title: 'Coworking',
-        img: 'img/slider/coworking.jpg',
+        img: 'img/slider/coworking1.jpg',
         tech: 'HTML, CSS, Gulp',
         link: 'https://stepanomelchenko.github.io/coworking/build'
     },
     {
         title: 'Burger',
-        img: 'img/slider/burger.jpg',
+        img: 'img/slider/burger1.jpg',
         tech: 'HTML, SCSS, Javascript, Gulp',
         link: 'https://stepanomelchenko.github.io/burger/build'
     },
